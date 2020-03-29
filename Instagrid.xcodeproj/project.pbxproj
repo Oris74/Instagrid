@@ -13,6 +13,9 @@
 		D95BC75C241FC57A00C1D2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95BC75A241FC57A00C1D2FC /* Main.storyboard */; };
 		D95BC75E241FC57C00C1D2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95BC75D241FC57C00C1D2FC /* Assets.xcassets */; };
 		D95BC761241FC57C00C1D2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95BC75F241FC57C00C1D2FC /* LaunchScreen.storyboard */; };
+		D9C5054E2430F657000E96E4 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9C5054D2430F657000E96E4 /* ThirstySoftRegular.otf */; };
+		D9C505502430F669000E96E4 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9C5054F2430F669000E96E4 /* Delm-Medium.otf */; };
+		D9C505522430FD67000E96E4 /* ZapfDingbats.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9C505512430FD67000E96E4 /* ZapfDingbats.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D95BC75D241FC57C00C1D2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95BC760241FC57C00C1D2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95BC762241FC57C00C1D2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C5054D2430F657000E96E4 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/Formations/OpenClassrooms/IOS/Projet 4 - Instagrid/ThirstySoftRegular.otf"; sourceTree = "<group>"; };
+		D9C5054F2430F669000E96E4 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/Formations/OpenClassrooms/IOS/Projet 4 - Instagrid/Delm-Medium.otf"; sourceTree = "<group>"; };
+		D9C505512430FD67000E96E4 /* ZapfDingbats.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ZapfDingbats.ttf; path = ../../../../../../../System/Library/Fonts/ZapfDingbats.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		D95BC753241FC57A00C1D2FC /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				D9C505512430FD67000E96E4 /* ZapfDingbats.ttf */,
+				D9C5054F2430F669000E96E4 /* Delm-Medium.otf */,
+				D9C5054D2430F657000E96E4 /* ThirstySoftRegular.otf */,
 				D95BC754241FC57A00C1D2FC /* AppDelegate.swift */,
 				D95BC756241FC57A00C1D2FC /* SceneDelegate.swift */,
 				D95BC758241FC57A00C1D2FC /* ViewController.swift */,
@@ -126,7 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95BC761241FC57C00C1D2FC /* LaunchScreen.storyboard in Resources */,
+				D9C505502430F669000E96E4 /* Delm-Medium.otf in Resources */,
 				D95BC75E241FC57C00C1D2FC /* Assets.xcassets in Resources */,
+				D9C505522430FD67000E96E4 /* ZapfDingbats.ttf in Resources */,
+				D9C5054E2430F657000E96E4 /* ThirstySoftRegular.otf in Resources */,
 				D95BC75C241FC57A00C1D2FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
