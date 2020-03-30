@@ -23,161 +23,315 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-0D-NKm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-0D-NKm">
                                 <rect key="frame" x="128" y="23" width="119" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="GRX-z8-AZM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCN-Cg-iJ1" userLabel="ViewPattern1">
-                                <rect key="frame" x="38" y="556" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="ZTP-YN-XIB">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="Y7h-Xb-FMt" userLabel="SelectedLayout1">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-DC-THZ" userLabel="ViewPattern2">
-                                <rect key="frame" x="148" y="556" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-BO-hqg">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="ZqO-ki-IOm" userLabel="SelectedLayout2">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kF9-zk-0tD" userLabel="ViewPattern3">
-                                <rect key="frame" x="258" y="556" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="081-Fh-D8M">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-Y6-WvB" userLabel="SelectedLayout3">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-Ub-ivK" userLabel="DisplayPattern">
-                                <rect key="frame" x="38" y="184" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ShP-bD-uR8" userLabel="UpRect">
-                                        <rect key="frame" x="15" y="16" width="269" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="dke-Uh-fxc" userLabel="PlusUpRect">
-                                                <rect key="frame" x="112" y="51" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-sC-kZV" userLabel="DownRect">
-                                        <rect key="frame" x="15" y="158" width="270" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="BRe-lY-Cpj" userLabel="PlusDownRect">
-                                                <rect key="frame" x="112" y="41" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="633-tq-PKS" userLabel="DownRightSquare">
-                                        <rect key="frame" x="156" y="157" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="ULH-wX-ddu" userLabel="PlusDownRight">
-                                                <rect key="frame" x="42" y="42" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-cu-0Fh" userLabel="downLeftSquare">
-                                        <rect key="frame" x="16" y="157" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="jig-1c-xcS" userLabel="PlusDownLeft">
-                                                <rect key="frame" x="42" y="42" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-U2-OKT" userLabel="UpLeftSquare">
-                                        <rect key="frame" x="15" y="15" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="3I0-Rd-Iqj" userLabel="PlusUpLeft">
-                                                <rect key="frame" x="42" y="42" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-7I-EOS" userLabel="UpRightSquare">
-                                        <rect key="frame" x="157" y="15" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-LD-b7F" userLabel="PlusUpRight">
-                                                <rect key="frame" x="42" y="42" width="45" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-Qp-faS">
-                                <rect key="frame" x="185.5" y="122" width="13.5" height="9.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-Qp-faS">
+                                <rect key="frame" x="183" y="122" width="9" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="l0w-4f-tdS"/>
+                                    <constraint firstAttribute="width" constant="9" id="lrv-Ex-YYO"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-3G-kqU">
-                                <rect key="frame" x="107" y="146" width="161" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-3G-kqU">
+                                <rect key="frame" x="107" y="149.5" width="161" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-Ub-ivK" userLabel="DisplayPattern">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShP-bD-uR8" userLabel="UpRect">
+                                        <rect key="frame" x="15" y="15" width="270" height="128"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="dke-Uh-fxc" userLabel="PlusUpRect">
+                                                <rect key="frame" x="112.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Bpn-i9-6bn"/>
+                                                    <constraint firstAttribute="width" constant="45" id="ZGi-Yt-HYJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="3xa-YL-XbB"/>
+                                            <constraint firstItem="dke-Uh-fxc" firstAttribute="centerX" secondItem="ShP-bD-uR8" secondAttribute="centerX" id="fl6-JX-ZzX"/>
+                                            <constraint firstAttribute="height" constant="128" id="j15-lJ-kk7"/>
+                                            <constraint firstItem="dke-Uh-fxc" firstAttribute="centerY" secondItem="ShP-bD-uR8" secondAttribute="centerY" id="lD0-Uc-5RB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-sC-kZV" userLabel="DownRect">
+                                        <rect key="frame" x="15" y="157" width="270" height="128"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="BRe-lY-Cpj" userLabel="PlusDownRect">
+                                                <rect key="frame" x="112.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="1W1-4e-uOx"/>
+                                                    <constraint firstAttribute="width" constant="45" id="B5X-ys-U2M"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="BRe-lY-Cpj" firstAttribute="centerX" secondItem="LcU-sC-kZV" secondAttribute="centerX" id="CMh-Ib-ijp"/>
+                                            <constraint firstAttribute="height" constant="128" id="EJS-ir-tR5"/>
+                                            <constraint firstAttribute="width" constant="270" id="Kec-bc-uJg"/>
+                                            <constraint firstItem="BRe-lY-Cpj" firstAttribute="centerY" secondItem="LcU-sC-kZV" secondAttribute="centerY" id="ko0-I6-tD4"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="633-tq-PKS" userLabel="DownRightSquare">
+                                        <rect key="frame" x="157" y="157" width="128" height="128"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="ULH-wX-ddu" userLabel="PlusDownRight">
+                                                <rect key="frame" x="41.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="8Y1-rf-9xa"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Wmw-A6-A6F"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ULH-wX-ddu" firstAttribute="centerX" secondItem="633-tq-PKS" secondAttribute="centerX" id="4er-C9-Kw3"/>
+                                            <constraint firstAttribute="height" constant="128" id="4kF-y9-scA"/>
+                                            <constraint firstItem="ULH-wX-ddu" firstAttribute="centerY" secondItem="633-tq-PKS" secondAttribute="centerY" id="N27-CS-Rij"/>
+                                            <constraint firstAttribute="width" constant="128" id="noJ-JD-SX9"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-cu-0Fh" userLabel="downLeftSquare">
+                                        <rect key="frame" x="15" y="157" width="128" height="128"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="jig-1c-xcS" userLabel="PlusDownLeft">
+                                                <rect key="frame" x="41.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="GfH-r7-qaQ"/>
+                                                    <constraint firstAttribute="width" constant="45" id="K4l-l6-UzY"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Rus-n8-hOD"/>
+                                            <constraint firstItem="jig-1c-xcS" firstAttribute="centerX" secondItem="d2i-cu-0Fh" secondAttribute="centerX" id="Tfe-UX-qM1"/>
+                                            <constraint firstAttribute="width" constant="128" id="Tw9-zb-nG9"/>
+                                            <constraint firstItem="jig-1c-xcS" firstAttribute="centerY" secondItem="d2i-cu-0Fh" secondAttribute="centerY" id="gqk-rp-eUU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-U2-OKT" userLabel="UpLeftSquare">
+                                        <rect key="frame" x="15" y="15" width="128" height="128"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="3I0-Rd-Iqj" userLabel="PlusUpLeft">
+                                                <rect key="frame" x="41.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="EO6-Sh-Zrx"/>
+                                                    <constraint firstAttribute="height" constant="45" id="j8g-Yo-qc1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3I0-Rd-Iqj" firstAttribute="centerX" secondItem="FwV-U2-OKT" secondAttribute="centerX" id="B8v-fR-AeG"/>
+                                            <constraint firstItem="3I0-Rd-Iqj" firstAttribute="centerY" secondItem="FwV-U2-OKT" secondAttribute="centerY" id="Eev-SC-wjG"/>
+                                            <constraint firstAttribute="width" constant="128" id="Vfx-aK-p5p"/>
+                                            <constraint firstAttribute="height" constant="128" id="bO9-Gl-jAF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-7I-EOS" userLabel="UpRightSquare">
+                                        <rect key="frame" x="157" y="15" width="128" height="128"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-LD-b7F" userLabel="PlusUpRight">
+                                                <rect key="frame" x="41.5" y="41.5" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="LZb-ES-CZQ"/>
+                                                    <constraint firstAttribute="height" constant="45" id="y2Q-DD-JTx"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ngp-LD-b7F" firstAttribute="centerX" secondItem="KkZ-7I-EOS" secondAttribute="centerX" id="1By-vS-cWT"/>
+                                            <constraint firstAttribute="width" constant="128" id="Fj8-ax-8Zf"/>
+                                            <constraint firstItem="Ngp-LD-b7F" firstAttribute="centerY" secondItem="KkZ-7I-EOS" secondAttribute="centerY" id="bix-Le-M5r"/>
+                                            <constraint firstAttribute="height" constant="128" id="lzi-hD-vlH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="d2i-cu-0Fh" secondAttribute="bottom" constant="15" id="0f6-GG-pTg"/>
+                                    <constraint firstItem="ShP-bD-uR8" firstAttribute="top" secondItem="Ppz-Ub-ivK" secondAttribute="top" constant="15" id="3MO-fr-JPy"/>
+                                    <constraint firstAttribute="trailing" secondItem="633-tq-PKS" secondAttribute="trailing" constant="15" id="5Ro-dX-bdz"/>
+                                    <constraint firstAttribute="width" constant="300" id="712-cy-4OI"/>
+                                    <constraint firstItem="LcU-sC-kZV" firstAttribute="leading" secondItem="Ppz-Ub-ivK" secondAttribute="leading" constant="15" id="Fea-dX-jPa"/>
+                                    <constraint firstItem="KkZ-7I-EOS" firstAttribute="top" secondItem="Ppz-Ub-ivK" secondAttribute="top" constant="15" id="GcB-rV-Oj6"/>
+                                    <constraint firstItem="ShP-bD-uR8" firstAttribute="leading" secondItem="Ppz-Ub-ivK" secondAttribute="leading" constant="15" id="Jnx-yF-Bma"/>
+                                    <constraint firstItem="FwV-U2-OKT" firstAttribute="leading" secondItem="Ppz-Ub-ivK" secondAttribute="leading" constant="15" id="Mko-Ui-e4Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="LcU-sC-kZV" secondAttribute="trailing" constant="15" id="Sc7-8U-Z2X"/>
+                                    <constraint firstAttribute="trailing" secondItem="ShP-bD-uR8" secondAttribute="trailing" constant="15" id="TzE-jr-RjQ"/>
+                                    <constraint firstItem="d2i-cu-0Fh" firstAttribute="leading" secondItem="Ppz-Ub-ivK" secondAttribute="leading" constant="15" id="W0K-uE-I2d"/>
+                                    <constraint firstAttribute="bottom" secondItem="633-tq-PKS" secondAttribute="bottom" constant="15" id="Zr9-6G-Rqz"/>
+                                    <constraint firstAttribute="bottom" secondItem="LcU-sC-kZV" secondAttribute="bottom" constant="15" id="d2Q-2k-CE5"/>
+                                    <constraint firstItem="FwV-U2-OKT" firstAttribute="top" secondItem="Ppz-Ub-ivK" secondAttribute="top" constant="15" id="kQV-74-Wx1"/>
+                                    <constraint firstAttribute="width" secondItem="Ppz-Ub-ivK" secondAttribute="height" multiplier="1:1" id="sx5-87-J7c"/>
+                                    <constraint firstAttribute="trailing" secondItem="KkZ-7I-EOS" secondAttribute="trailing" constant="15" id="utW-x8-t54"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCN-Cg-iJ1" userLabel="ViewPattern1">
+                                <rect key="frame" x="37.5" y="557" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="ZTP-YN-XIB">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="HoR-VY-sOk"/>
+                                            <constraint firstAttribute="height" constant="80" id="aRy-Xg-Dgf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="Y7h-Xb-FMt" userLabel="SelectedLayout1">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="K9a-JV-mqM"/>
+                                            <constraint firstAttribute="width" constant="80" id="rEG-Hd-XeN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Y7h-Xb-FMt" firstAttribute="centerX" secondItem="jCN-Cg-iJ1" secondAttribute="centerX" id="3Ye-sv-G9T"/>
+                                    <constraint firstItem="ZTP-YN-XIB" firstAttribute="centerY" secondItem="jCN-Cg-iJ1" secondAttribute="centerY" id="3pJ-1r-Pkc"/>
+                                    <constraint firstAttribute="height" constant="80" id="TkC-iH-mOH"/>
+                                    <constraint firstItem="ZTP-YN-XIB" firstAttribute="centerX" secondItem="jCN-Cg-iJ1" secondAttribute="centerX" id="sDf-95-P6T"/>
+                                    <constraint firstItem="Y7h-Xb-FMt" firstAttribute="centerY" secondItem="jCN-Cg-iJ1" secondAttribute="centerY" id="sUe-H0-HYi"/>
+                                    <constraint firstAttribute="width" constant="80" id="yVV-xZ-vZe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-DC-THZ" userLabel="ViewPattern2">
+                                <rect key="frame" x="147.5" y="557" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-BO-hqg">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="1HU-0X-Z4A"/>
+                                            <constraint firstAttribute="width" constant="80" id="S5P-tw-kf0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="ZqO-ki-IOm" userLabel="SelectedLayout2">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8mP-1I-vE3"/>
+                                            <constraint firstAttribute="height" constant="80" id="hvt-iA-vjH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3fO-2d-K7V"/>
+                                    <constraint firstItem="fr7-BO-hqg" firstAttribute="centerX" secondItem="DM7-DC-THZ" secondAttribute="centerX" id="J7P-Fd-nCT"/>
+                                    <constraint firstAttribute="width" constant="80" id="UdE-9P-Rtg"/>
+                                    <constraint firstItem="ZqO-ki-IOm" firstAttribute="centerX" secondItem="DM7-DC-THZ" secondAttribute="centerX" id="YWg-xd-YIw"/>
+                                    <constraint firstItem="fr7-BO-hqg" firstAttribute="centerY" secondItem="DM7-DC-THZ" secondAttribute="centerY" id="iz8-ij-MkI"/>
+                                    <constraint firstItem="ZqO-ki-IOm" firstAttribute="centerY" secondItem="DM7-DC-THZ" secondAttribute="centerY" id="mZv-LG-edF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kF9-zk-0tD" userLabel="ViewPattern3">
+                                <rect key="frame" x="257.5" y="557" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="081-Fh-D8M">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="6KP-cl-0N8"/>
+                                            <constraint firstAttribute="height" constant="80" id="Ztc-3C-DSA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-Y6-WvB" userLabel="SelectedLayout3">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="406-dP-Dqm"/>
+                                            <constraint firstAttribute="width" constant="80" id="g7f-o1-YVb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="yWp-Y6-WvB" firstAttribute="centerY" secondItem="kF9-zk-0tD" secondAttribute="centerY" id="9JK-rK-FX2"/>
+                                    <constraint firstItem="yWp-Y6-WvB" firstAttribute="centerX" secondItem="kF9-zk-0tD" secondAttribute="centerX" id="HUA-NL-MWX"/>
+                                    <constraint firstAttribute="width" constant="80" id="Ts4-a6-LYK"/>
+                                    <constraint firstItem="081-Fh-D8M" firstAttribute="centerY" secondItem="kF9-zk-0tD" secondAttribute="centerY" id="VY8-Bv-EFr"/>
+                                    <constraint firstItem="081-Fh-D8M" firstAttribute="centerX" secondItem="kF9-zk-0tD" secondAttribute="centerX" id="cos-0U-Kel"/>
+                                    <constraint firstAttribute="height" constant="80" id="dVj-Su-tyZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wk6-Qp-faS" firstAttribute="top" secondItem="GKY-0D-NKm" secondAttribute="bottom" constant="60" id="3pS-Ua-LgE"/>
                             <constraint firstItem="GKY-0D-NKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5aX-MZ-yFH"/>
                             <constraint firstItem="OK6-3G-kqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BOU-0B-kdN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jCN-Cg-iJ1" secondAttribute="bottom" constant="30" id="BnL-K4-v70"/>
+                            <constraint firstItem="DM7-DC-THZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D1d-GS-ggE"/>
+                            <constraint firstItem="GKY-0D-NKm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Dv3-1p-MtJ"/>
+                            <constraint firstItem="DM7-DC-THZ" firstAttribute="bottom" secondItem="jCN-Cg-iJ1" secondAttribute="bottom" id="IcL-MF-fUb"/>
+                            <constraint firstItem="OK6-3G-kqU" firstAttribute="top" secondItem="Wk6-Qp-faS" secondAttribute="bottom" constant="14.5" id="K72-Nh-xuk"/>
+                            <constraint firstItem="Ppz-Ub-ivK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P17-Ff-OXb"/>
+                            <constraint firstItem="Ppz-Ub-ivK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kVG-6q-CBy"/>
+                            <constraint firstItem="kF9-zk-0tD" firstAttribute="leading" secondItem="DM7-DC-THZ" secondAttribute="trailing" constant="30" id="ppl-ch-VJV"/>
+                            <constraint firstItem="DM7-DC-THZ" firstAttribute="leading" secondItem="jCN-Cg-iJ1" secondAttribute="trailing" constant="30" id="sjb-a0-wQk"/>
                             <constraint firstItem="Wk6-Qp-faS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sou-DO-tkS"/>
+                            <constraint firstItem="kF9-zk-0tD" firstAttribute="bottom" secondItem="jCN-Cg-iJ1" secondAttribute="bottom" id="x2q-Ey-AO0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Wk6-Qp-faS"/>
+                                <exclude reference="OK6-3G-kqU"/>
+                                <exclude reference="Ppz-Ub-ivK"/>
                                 <exclude reference="jCN-Cg-iJ1"/>
                                 <exclude reference="DM7-DC-THZ"/>
                                 <exclude reference="kF9-zk-0tD"/>
-                                <exclude reference="Ppz-Ub-ivK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BnL-K4-v70"/>
+                                <exclude reference="BOU-0B-kdN"/>
+                                <exclude reference="K72-Nh-xuk"/>
+                                <exclude reference="P17-Ff-OXb"/>
+                                <exclude reference="kVG-6q-CBy"/>
+                                <exclude reference="3pS-Ua-LgE"/>
+                                <exclude reference="sou-DO-tkS"/>
+                                <exclude reference="D1d-GS-ggE"/>
+                                <exclude reference="IcL-MF-fUb"/>
+                                <exclude reference="sjb-a0-wQk"/>
+                                <exclude reference="ppl-ch-VJV"/>
+                                <exclude reference="x2q-Ey-AO0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Wk6-Qp-faS"/>
+                                <include reference="OK6-3G-kqU"/>
+                                <include reference="Ppz-Ub-ivK"/>
                                 <include reference="jCN-Cg-iJ1"/>
                                 <include reference="DM7-DC-THZ"/>
                                 <include reference="kF9-zk-0tD"/>
-                                <include reference="Ppz-Ub-ivK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BnL-K4-v70"/>
+                                <include reference="BOU-0B-kdN"/>
+                                <include reference="K72-Nh-xuk"/>
+                                <include reference="P17-Ff-OXb"/>
+                                <include reference="kVG-6q-CBy"/>
+                                <include reference="3pS-Ua-LgE"/>
+                                <include reference="sou-DO-tkS"/>
+                                <include reference="D1d-GS-ggE"/>
+                                <include reference="IcL-MF-fUb"/>
+                                <include reference="sjb-a0-wQk"/>
+                                <include reference="ppl-ch-VJV"/>
+                                <include reference="x2q-Ey-AO0"/>
                             </mask>
                         </variation>
                     </view>
