@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Layout1View">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcm-5o-pJa" userLabel="UpRect">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="113"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1j-qW-FDM" userLabel="ButtonUpRect">
+                            <rect key="frame" x="97.5" y="34" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="7ql-8j-0vd"/>
+                                <constraint firstAttribute="width" secondItem="I1j-qW-FDM" secondAttribute="height" multiplier="1:1" id="Co7-ZG-eoV"/>
+                            </constraints>
+                            <state key="normal" image="Plus"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Tcm-5o-pJa" secondAttribute="height" multiplier="87:41" id="gVF-ri-HhC"/>
+                        <constraint firstItem="I1j-qW-FDM" firstAttribute="centerY" secondItem="Tcm-5o-pJa" secondAttribute="centerY" id="o61-oz-5TE"/>
+                        <constraint firstItem="I1j-qW-FDM" firstAttribute="centerX" secondItem="Tcm-5o-pJa" secondAttribute="centerX" id="oqG-Qj-LWq"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-De-llZ" userLabel="StackDown">
+                    <rect key="frame" x="0.0" y="128" width="240" height="113.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c47-sk-cSv" userLabel="DownLeftSquare">
+                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-MM-GVh" userLabel="PlusDownLeftSquare">
+                                    <rect key="frame" x="34" y="34" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="YQK-MM-GVh" secondAttribute="height" multiplier="1:1" id="FcX-Ci-vkE"/>
+                                        <constraint firstAttribute="width" constant="45" id="kyA-7q-O8b"/>
+                                    </constraints>
+                                    <state key="normal" image="Plus"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="YQK-MM-GVh" firstAttribute="centerX" secondItem="c47-sk-cSv" secondAttribute="centerX" id="4oe-Wx-5WK"/>
+                                <constraint firstItem="YQK-MM-GVh" firstAttribute="centerY" secondItem="c47-sk-cSv" secondAttribute="centerY" id="ads-dq-0ib"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGW-w3-wBJ" userLabel="DownRightSquare">
+                            <rect key="frame" x="127.5" y="0.0" width="112.5" height="113.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZn-OH-zoT" userLabel="PlusDownRightSquare">
+                                    <rect key="frame" x="34" y="34" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="JZn-OH-zoT" secondAttribute="height" multiplier="1:1" id="hxE-JJ-5KP"/>
+                                        <constraint firstAttribute="width" constant="45" id="rEg-pe-NWZ"/>
+                                    </constraints>
+                                    <state key="normal" image="Plus"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="JZn-OH-zoT" firstAttribute="centerY" secondItem="lGW-w3-wBJ" secondAttribute="centerY" id="kmh-Up-f8m"/>
+                                <constraint firstItem="JZn-OH-zoT" firstAttribute="centerX" secondItem="lGW-w3-wBJ" secondAttribute="centerX" id="pPs-au-cww"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="lGW-w3-wBJ" firstAttribute="width" secondItem="c47-sk-cSv" secondAttribute="width" id="IiM-ay-dIG"/>
+                        <constraint firstItem="lGW-w3-wBJ" firstAttribute="height" secondItem="c47-sk-cSv" secondAttribute="height" id="jSh-S2-TNb"/>
+                        <constraint firstAttribute="width" secondItem="L8D-De-llZ" secondAttribute="height" multiplier="354:167" id="y4Z-bw-QAW"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tcm-5o-pJa" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="4Nb-ce-m9w"/>
+                <constraint firstItem="Tcm-5o-pJa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IzV-qD-1u7"/>
+                <constraint firstItem="Tcm-5o-pJa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KIM-wj-7Ni"/>
+                <constraint firstItem="L8D-De-llZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SD7-aR-zXW"/>
+                <constraint firstItem="L8D-De-llZ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="bW0-Pr-cmh"/>
+                <constraint firstItem="L8D-De-llZ" firstAttribute="top" secondItem="Tcm-5o-pJa" secondAttribute="bottom" constant="15" id="e55-SY-uaW"/>
+                <constraint firstItem="L8D-De-llZ" firstAttribute="width" secondItem="L8D-De-llZ" secondAttribute="height" multiplier="354:167" id="tlL-zq-8ft"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="100.35211267605634" y="-9.375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Plus" width="13.5" height="13.5"/>
+    </resources>
+</document>
