@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-0D-NKm">
-                                <rect key="frame" x="275" y="14" width="117" height="39"/>
+                                <rect key="frame" x="128.5" y="14" width="118.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="GRX-z8-AZM"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06X-8R-eHT">
-                                <rect key="frame" x="5" y="225.5" width="180.5" height="61"/>
+                                <rect key="frame" x="5" y="225.5" width="180.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-Ub-ivK" userLabel="DisplayPattern">
-                                <rect key="frame" x="187.5" y="63" width="292" height="292"/>
+                                <rect key="frame" x="25" y="171" width="325" height="325"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ppz-Ub-ivK" secondAttribute="height" multiplier="1:1" id="sx5-87-J7c"/>
@@ -89,7 +89,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <connections>
-                                            <action selector="ButtonLandscapeUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Can-ML-r4s"/>
+                                            <action selector="didTouchButtonLandscapeUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrg-E0-EAZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDN-jI-gFz" userLabel="ButtonMiddle">
@@ -99,7 +99,7 @@
                                         </constraints>
                                         <state key="normal" image="Selected" backgroundImage="Layout 2"/>
                                         <connections>
-                                            <action selector="buttonLandscapeMiddle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjF-my-OzX"/>
+                                            <action selector="didTouchButtonLandscapeMiddle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cz-vA-rfb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mA-A9-oCy" userLabel="ButtonDown">
@@ -109,7 +109,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <connections>
-                                            <action selector="buttonLandscapeDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zNa-ex-14k"/>
+                                            <action selector="didTouchButtonLandscapeDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dRn-Bo-hOF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -133,7 +133,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="medium"/>
                                         </state>
                                         <connections>
-                                            <action selector="ButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jF3-F7-irq"/>
+                                            <action selector="didTouchButtonPortraitLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKn-lA-R29"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-da-RCK" userLabel="ButtonCentral">
@@ -143,7 +143,7 @@
                                         </constraints>
                                         <state key="normal" image="Selected" backgroundImage="Layout 2"/>
                                         <connections>
-                                            <action selector="ButtonCentral:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYy-Fe-gn8"/>
+                                            <action selector="didTouchButtonPortraitCentral:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBc-Aw-tHd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-gT-L6X" userLabel="ButtonRight">
@@ -153,7 +153,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <connections>
-                                            <action selector="ButtonPortraitRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lk7-rK-FQD"/>
+                                            <action selector="didTouchButtonPortraitRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vgo-el-DLt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -209,6 +209,9 @@
                             <mask key="constraints">
                                 <exclude reference="Qqb-Tg-2hy"/>
                                 <exclude reference="rTF-FG-vuE"/>
+                                <exclude reference="Kor-uM-POr"/>
+                                <exclude reference="joP-Yu-v1A"/>
+                                <exclude reference="kBa-ll-bQA"/>
                                 <exclude reference="ZX8-Jz-0Vq"/>
                                 <exclude reference="cHV-LB-TMS"/>
                                 <exclude reference="gwd-4j-5Og"/>
@@ -237,6 +240,9 @@
                                 <include reference="GrI-5g-HVp"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Kor-uM-POr"/>
+                                <include reference="joP-Yu-v1A"/>
+                                <include reference="kBa-ll-bQA"/>
                                 <include reference="ZX8-Jz-0Vq"/>
                                 <include reference="cHV-LB-TMS"/>
                                 <include reference="jAA-Rh-tgU"/>
@@ -271,7 +277,13 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="swipeDipslayPattern" destination="Ppz-Ub-ivK" id="yYP-SP-DLY"/>
+                        <outlet property="buttonLandscapeDown" destination="5mA-A9-oCy" id="y24-UD-Az0"/>
+                        <outlet property="buttonLandscapeMiddle" destination="cDN-jI-gFz" id="pjf-57-Vge"/>
+                        <outlet property="buttonLandscapeUp" destination="4Tv-l7-m71" id="chj-wh-7CN"/>
+                        <outlet property="buttonPortraitCentral" destination="Oa1-da-RCK" id="wyZ-Hh-gqh"/>
+                        <outlet property="buttonPortraitLeft" destination="qFh-hy-VXU" id="xF0-Qd-hNC"/>
+                        <outlet property="buttonPortraitRight" destination="m4O-gT-L6X" id="6CO-a0-A6B"/>
+                        <outlet property="displayPattern" destination="Ppz-Ub-ivK" id="9i8-OR-rCq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -78,13 +78,10 @@
                         <constraint firstAttribute="trailing" secondItem="1Cd-zZ-aoI" secondAttribute="trailing" id="RsG-XL-dP9"/>
                         <constraint firstItem="1Cd-zZ-aoI" firstAttribute="leading" secondItem="HO8-Bq-byX" secondAttribute="trailing" constant="15" id="Txx-y1-WA4"/>
                         <constraint firstItem="HO8-Bq-byX" firstAttribute="leading" secondItem="3D1-Ht-uQ8" secondAttribute="leading" id="Uoh-Vy-4Ah"/>
-                        <constraint firstAttribute="bottom" secondItem="HO8-Bq-byX" secondAttribute="bottom" constant="20" symbolic="YES" id="WlT-ju-Kny"/>
-                        <constraint firstItem="HO8-Bq-byX" firstAttribute="top" secondItem="3D1-Ht-uQ8" secondAttribute="top" constant="20" symbolic="YES" id="caZ-Lu-wNi"/>
                         <constraint firstItem="1Cd-zZ-aoI" firstAttribute="top" secondItem="3D1-Ht-uQ8" secondAttribute="top" id="dQx-es-dEe"/>
                         <constraint firstAttribute="bottom" secondItem="1Cd-zZ-aoI" secondAttribute="bottom" id="gSp-A5-R4U"/>
                         <constraint firstItem="1Cd-zZ-aoI" firstAttribute="width" secondItem="HO8-Bq-byX" secondAttribute="width" id="mXR-Lh-vyG"/>
                         <constraint firstAttribute="width" secondItem="3D1-Ht-uQ8" secondAttribute="height" multiplier="354:167" id="mrd-1R-g3l"/>
-                        <constraint firstItem="1Cd-zZ-aoI" firstAttribute="leading" secondItem="HO8-Bq-byX" secondAttribute="trailing" id="uEA-9b-Hx8"/>
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mc-GC-f1M" userLabel="DownRect">
