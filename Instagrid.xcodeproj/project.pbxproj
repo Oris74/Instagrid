@@ -58,11 +58,8 @@
 			children = (
 				D90E927E2434A45B0081B583 /* Main.storyboard */,
 				D90E925C2433B2EF0081B583 /* Layout1View.xib */,
-				D90E927824349DCA0081B583 /* Layout1View.swift */,
 				D90E92602434897A0081B583 /* Layout2View.xib */,
-				D90E927A24349E160081B583 /* Layout2View.swift */,
 				D90E92622434898D0081B583 /* Layout3View.xib */,
-				D90E927C24349E5C0081B583 /* Layout3View.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -91,6 +88,9 @@
 		D90E926E243495FA0081B583 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D90E927824349DCA0081B583 /* Layout1View.swift */,
+				D90E927A24349E160081B583 /* Layout2View.swift */,
+				D90E927C24349E5C0081B583 /* Layout3View.swift */,
 				D95BC758241FC57A00C1D2FC /* ViewController.swift */,
 			);
 			name = Controller;

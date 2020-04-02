@@ -17,14 +17,24 @@ class Layout3View: UIView {
         // Drawing code
     }
     */
+    
+    @IBOutlet weak var imageUpLeft: UIImageView!
+    @IBOutlet weak var imageUpRight: UIImageView!
+    @IBOutlet weak var imageDownLeft: UIImageView!
+    @IBOutlet weak var imageDownRight: UIImageView!
+    
+    
+    @IBAction func clickOnButtonUpLeft(_ sender: Any) {
+    }
+    
+    @IBAction func clickOnButtonUpRight(_ sender: Any) {
+    }
+    
+    @IBAction func clickOnButtonDownLeft(_ sender: Any) {
+    }
 
-    @IBOutlet weak var ButtonUpLeft: UIButton!
-    @IBOutlet weak var ButtonUpRight: UIButton!
-    @IBOutlet weak var ButtonDownLeft: UIButton!
-    @IBOutlet weak var ButtonDownRight: UIButton!
     
-    
-    
-    
+    @IBAction func clickOnButtonDownRight(_ sender: Any) {
+    }
 
 }

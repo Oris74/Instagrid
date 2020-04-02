@@ -29,6 +29,9 @@
                                         <constraint firstAttribute="width" secondItem="J9c-jp-ibb" secondAttribute="height" multiplier="1:1" id="yPu-ue-jPI"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="clickOnButtonUpLeft:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hr0-X9-OyZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -54,6 +57,9 @@
                                         <constraint firstAttribute="width" constant="45" id="cJT-Wi-x8a"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="clickOnButtonUpRight:" destination="iN0-l3-epB" eventType="touchUpInside" id="hCm-qn-3Ec"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -89,6 +95,9 @@
                                         <constraint firstAttribute="width" constant="45" id="uqZ-sz-dB3"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="clickOnButtonDownLeft:" destination="iN0-l3-epB" eventType="touchUpInside" id="3GQ-zy-Ltp"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -114,6 +123,9 @@
                                         <constraint firstAttribute="width" constant="45" id="k9g-n8-fsw"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="clickOnButtonDownRight:" destination="iN0-l3-epB" eventType="touchUpInside" id="BHa-K0-nxA"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -151,12 +163,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="ButtonDownLeft" destination="NsO-Zm-H3A" id="pDg-r4-h8G"/>
-                <outlet property="ButtonDownRight" destination="MH9-cF-96C" id="snH-7J-CuV"/>
-                <outlet property="ButtonUpLeft" destination="J9c-jp-ibb" id="2b8-Ff-9gK"/>
-                <outlet property="ButtonUpRight" destination="dZo-gV-M3b" id="2ZW-Zx-9vo"/>
+                <outlet property="imageDownLeft" destination="hs7-eH-uB3" id="KDZ-0k-CQ2"/>
+                <outlet property="imageDownRight" destination="9fA-TB-sMl" id="RsF-6A-Yif"/>
+                <outlet property="imageUpLeft" destination="pDL-JB-0cr" id="szc-OZ-iqB"/>
+                <outlet property="imageUpRight" destination="x2w-uW-jcn" id="04R-qO-gOt"/>
             </connections>
-            <point key="canvasLocation" x="-343" y="-101"/>
+            <point key="canvasLocation" x="-426" y="-1325"/>
         </view>
     </objects>
     <resources>

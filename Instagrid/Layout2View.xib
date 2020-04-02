@@ -29,6 +29,9 @@
                                         <constraint firstAttribute="width" secondItem="thJ-ca-ePo" secondAttribute="height" multiplier="1:1" id="exe-TZ-kDn"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="buttonUpLeft:" destination="iN0-l3-epB" eventType="touchUpInside" id="SaH-xb-fcO"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -54,6 +57,9 @@
                                         <constraint firstAttribute="width" secondItem="jnp-Qd-D2K" secondAttribute="height" multiplier="1:1" id="LoM-Wu-W2z"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
+                                    <connections>
+                                        <action selector="ButtonUpRight:" destination="iN0-l3-epB" eventType="touchUpInside" id="zBZ-tm-ec1"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -94,6 +100,9 @@
                                 <constraint firstAttribute="width" constant="45" id="cIL-fo-3xx"/>
                             </constraints>
                             <state key="normal" image="Plus"/>
+                            <connections>
+                                <action selector="buttonDownRect:" destination="iN0-l3-epB" eventType="touchUpInside" id="buB-y5-a6U"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -126,6 +135,9 @@
                 <outlet property="ButtonDownRect" destination="y7c-PB-JUS" id="sgK-Ed-WqK"/>
                 <outlet property="ButtonUpLeft" destination="thJ-ca-ePo" id="Upr-cz-n0j"/>
                 <outlet property="ButtonUpRight" destination="jnp-Qd-D2K" id="fbK-R6-SYK"/>
+                <outlet property="imageDownRect" destination="32h-AG-dgo" id="jk1-GB-LDg"/>
+                <outlet property="imageUpLeft" destination="Lyu-zU-snS" id="usq-yx-3Gp"/>
+                <outlet property="imageUpRight" destination="r3n-3a-Qzi" id="CxD-Ia-yBr"/>
             </connections>
             <point key="canvasLocation" x="105.79710144927537" y="14.732142857142856"/>
         </view>

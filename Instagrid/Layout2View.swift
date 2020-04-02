@@ -17,8 +17,17 @@ class Layout2View: UIView {
         // Drawing code
     }
     */
-    @IBOutlet weak var ButtonUpLeft: UIButton!
-    @IBOutlet weak var ButtonUpRight: UIButton!
-    @IBOutlet weak var ButtonDownRect: UIButton!
+    @IBOutlet weak var imageUpLeft: UIImageView!
+    @IBOutlet weak var imageUpRight: UIImageView!
+    @IBOutlet weak var imageDownRect: UIImageView!
+    
+    
+    @IBAction func clickOnButtonUpLeft(_ sender: Any) {
+    }
+    @IBAction func clickOnButtonUpRight(_ sender: Any) {
+    }
+    @IBAction func clickObuttonDownRect(_ sender: Any) {
+    }
+    
     
 }
