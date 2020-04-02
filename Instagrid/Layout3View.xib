@@ -19,6 +19,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrv-xC-x51" userLabel="UpLeftSquare">
                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-JB-0cr" userLabel="UpLeftImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-jp-ibb" userLabel="PlusUpLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -30,13 +33,20 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="pDL-JB-0cr" firstAttribute="top" secondItem="Yrv-xC-x51" secondAttribute="top" id="4je-D9-LdO"/>
+                                <constraint firstAttribute="bottom" secondItem="pDL-JB-0cr" secondAttribute="bottom" id="Ik2-EK-wrs"/>
                                 <constraint firstItem="J9c-jp-ibb" firstAttribute="centerX" secondItem="Yrv-xC-x51" secondAttribute="centerX" id="Isf-6K-rK9"/>
                                 <constraint firstItem="J9c-jp-ibb" firstAttribute="centerY" secondItem="Yrv-xC-x51" secondAttribute="centerY" id="hDI-MW-dxf"/>
+                                <constraint firstAttribute="trailing" secondItem="pDL-JB-0cr" secondAttribute="trailing" id="iCA-2T-2He"/>
+                                <constraint firstItem="pDL-JB-0cr" firstAttribute="leading" secondItem="Yrv-xC-x51" secondAttribute="leading" id="tMe-Sj-rn6"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slm-bQ-JwS" userLabel="UpRightSquare">
                             <rect key="frame" x="127.5" y="0.0" width="112.5" height="113"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-uW-jcn" userLabel="UpRightImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-gV-M3b" userLabel="PlusUpRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -48,7 +58,11 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="x2w-uW-jcn" firstAttribute="leading" secondItem="slm-bQ-JwS" secondAttribute="leading" id="09j-zg-YvD"/>
+                                <constraint firstAttribute="trailing" secondItem="x2w-uW-jcn" secondAttribute="trailing" id="9iX-YR-fPm"/>
+                                <constraint firstAttribute="bottom" secondItem="x2w-uW-jcn" secondAttribute="bottom" id="BgE-3b-1aB"/>
                                 <constraint firstItem="dZo-gV-M3b" firstAttribute="centerY" secondItem="slm-bQ-JwS" secondAttribute="centerY" id="OL2-1Q-iDR"/>
+                                <constraint firstItem="x2w-uW-jcn" firstAttribute="top" secondItem="slm-bQ-JwS" secondAttribute="top" id="bcm-pI-R0B"/>
                                 <constraint firstItem="dZo-gV-M3b" firstAttribute="centerX" secondItem="slm-bQ-JwS" secondAttribute="centerX" id="nQw-z4-LV8"/>
                             </constraints>
                         </view>
@@ -65,6 +79,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHL-NI-wEp" userLabel="DownLeftSquare">
                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-eH-uB3" userLabel="DownLeftImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-Zm-H3A" userLabel="PlusDownLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -76,13 +93,20 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hs7-eH-uB3" secondAttribute="trailing" id="1Lq-7M-Re6"/>
                                 <constraint firstItem="NsO-Zm-H3A" firstAttribute="centerY" secondItem="oHL-NI-wEp" secondAttribute="centerY" id="Bqo-ma-F5B"/>
+                                <constraint firstAttribute="bottom" secondItem="hs7-eH-uB3" secondAttribute="bottom" id="ELd-my-zfa"/>
+                                <constraint firstItem="hs7-eH-uB3" firstAttribute="top" secondItem="oHL-NI-wEp" secondAttribute="top" id="KJu-iN-YCw"/>
                                 <constraint firstItem="NsO-Zm-H3A" firstAttribute="centerX" secondItem="oHL-NI-wEp" secondAttribute="centerX" id="h6H-Hv-fCS"/>
+                                <constraint firstItem="hs7-eH-uB3" firstAttribute="leading" secondItem="oHL-NI-wEp" secondAttribute="leading" id="jMl-79-vjt"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-RV-E2a" userLabel="DownRightSquare">
                             <rect key="frame" x="127.5" y="0.0" width="112.5" height="113"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fA-TB-sMl" userLabel="DownRightImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MH9-cF-96C" userLabel="PlusDownRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -94,15 +118,26 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="9fA-TB-sMl" secondAttribute="bottom" id="8hP-uy-Y98"/>
+                                <constraint firstItem="9fA-TB-sMl" firstAttribute="top" secondItem="eOt-RV-E2a" secondAttribute="top" id="FDg-z5-TYQ"/>
+                                <constraint firstAttribute="trailing" secondItem="9fA-TB-sMl" secondAttribute="trailing" id="iBb-yc-8WK"/>
                                 <constraint firstItem="MH9-cF-96C" firstAttribute="centerY" secondItem="eOt-RV-E2a" secondAttribute="centerY" id="oDZ-uU-hwo"/>
                                 <constraint firstItem="MH9-cF-96C" firstAttribute="centerX" secondItem="eOt-RV-E2a" secondAttribute="centerX" id="vcT-ox-v34"/>
+                                <constraint firstItem="9fA-TB-sMl" firstAttribute="leading" secondItem="eOt-RV-E2a" secondAttribute="leading" id="w1W-Qn-9bH"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oHL-NI-wEp" secondAttribute="bottom" constant="20" symbolic="YES" id="3AZ-bw-irO"/>
+                        <constraint firstItem="eOt-RV-E2a" firstAttribute="leading" secondItem="oHL-NI-wEp" secondAttribute="trailing" constant="15" id="9dL-U4-k3L"/>
                         <constraint firstItem="eOt-RV-E2a" firstAttribute="height" secondItem="oHL-NI-wEp" secondAttribute="height" id="VWw-jX-4j0"/>
                         <constraint firstItem="eOt-RV-E2a" firstAttribute="width" secondItem="oHL-NI-wEp" secondAttribute="width" id="be3-8F-YXi"/>
+                        <constraint firstItem="oHL-NI-wEp" firstAttribute="top" secondItem="Hzr-4o-Owl" secondAttribute="top" constant="20" symbolic="YES" id="dxC-v8-1VI"/>
+                        <constraint firstAttribute="trailing" secondItem="eOt-RV-E2a" secondAttribute="trailing" id="nIs-80-0e4"/>
+                        <constraint firstItem="eOt-RV-E2a" firstAttribute="top" secondItem="Hzr-4o-Owl" secondAttribute="top" constant="20" symbolic="YES" id="uT6-aw-cO8"/>
                         <constraint firstAttribute="width" secondItem="Hzr-4o-Owl" secondAttribute="height" multiplier="354:167" id="vUh-6r-RKz"/>
+                        <constraint firstAttribute="bottom" secondItem="eOt-RV-E2a" secondAttribute="bottom" constant="20" symbolic="YES" id="x1f-EZ-n1H"/>
+                        <constraint firstItem="oHL-NI-wEp" firstAttribute="leading" secondItem="Hzr-4o-Owl" secondAttribute="leading" id="xrx-wL-cDR"/>
                     </constraints>
                 </stackView>
             </subviews>

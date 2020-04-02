@@ -14,6 +14,8 @@
 		D90E927B24349E160081B583 /* Layout2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90E927A24349E160081B583 /* Layout2View.swift */; };
 		D90E927D24349E5C0081B583 /* Layout3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90E927C24349E5C0081B583 /* Layout3View.swift */; };
 		D90E927F2434A45B0081B583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90E927E2434A45B0081B583 /* Main.storyboard */; };
+		D90E92852434CD330081B583 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D90E92822434CD320081B583 /* ThirstySoftRegular.otf */; };
+		D90E92872434CD330081B583 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D90E92842434CD330081B583 /* Delm-Medium.otf */; };
 		D95BC755241FC57A00C1D2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC754241FC57A00C1D2FC /* AppDelegate.swift */; };
 		D95BC757241FC57A00C1D2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC756241FC57A00C1D2FC /* SceneDelegate.swift */; };
 		D95BC759241FC57A00C1D2FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC758241FC57A00C1D2FC /* ViewController.swift */; };
@@ -25,13 +27,12 @@
 		D90E925C2433B2EF0081B583 /* Layout1View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout1View.xib; sourceTree = "<group>"; };
 		D90E92602434897A0081B583 /* Layout2View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout2View.xib; sourceTree = "<group>"; };
 		D90E92622434898D0081B583 /* Layout3View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout3View.xib; sourceTree = "<group>"; };
-		D90E9275243496460081B583 /* ZapfDingbats.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ZapfDingbats.ttf; path = ../../../../../../../System/Library/Fonts/ZapfDingbats.ttf; sourceTree = "<group>"; };
-		D90E9276243496530081B583 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/Formations/OpenClassrooms/IOS/Projet 4 - Instagrid/ThirstySoftRegular.otf"; sourceTree = "<group>"; };
-		D90E9277243496530081B583 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/Formations/OpenClassrooms/IOS/Projet 4 - Instagrid/Delm-Medium.otf"; sourceTree = "<group>"; };
 		D90E927824349DCA0081B583 /* Layout1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout1View.swift; sourceTree = "<group>"; };
 		D90E927A24349E160081B583 /* Layout2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout2View.swift; sourceTree = "<group>"; };
 		D90E927C24349E5C0081B583 /* Layout3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout3View.swift; sourceTree = "<group>"; };
 		D90E927E2434A45B0081B583 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D90E92822434CD320081B583 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		D90E92842434CD330081B583 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		D95BC751241FC57A00C1D2FC /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95BC754241FC57A00C1D2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95BC756241FC57A00C1D2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +58,10 @@
 			children = (
 				D90E927E2434A45B0081B583 /* Main.storyboard */,
 				D90E925C2433B2EF0081B583 /* Layout1View.xib */,
-				D90E92602434897A0081B583 /* Layout2View.xib */,
-				D90E92622434898D0081B583 /* Layout3View.xib */,
 				D90E927824349DCA0081B583 /* Layout1View.swift */,
+				D90E92602434897A0081B583 /* Layout2View.xib */,
 				D90E927A24349E160081B583 /* Layout2View.swift */,
+				D90E92622434898D0081B583 /* Layout3View.xib */,
 				D90E927C24349E5C0081B583 /* Layout3View.swift */,
 			);
 			name = Views;
@@ -76,14 +77,13 @@
 		D90E926D243495C70081B583 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D90E92842434CD330081B583 /* Delm-Medium.otf */,
+				D90E92822434CD320081B583 /* ThirstySoftRegular.otf */,
+				D95BC762241FC57C00C1D2FC /* Info.plist */,
 				D95BC754241FC57A00C1D2FC /* AppDelegate.swift */,
 				D95BC756241FC57A00C1D2FC /* SceneDelegate.swift */,
-				D95BC762241FC57C00C1D2FC /* Info.plist */,
 				D95BC75D241FC57C00C1D2FC /* Assets.xcassets */,
 				D95BC75F241FC57C00C1D2FC /* LaunchScreen.storyboard */,
-				D90E9277243496530081B583 /* Delm-Medium.otf */,
-				D90E9276243496530081B583 /* ThirstySoftRegular.otf */,
-				D90E9275243496460081B583 /* ZapfDingbats.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,8 +185,10 @@
 				D90E925D2433B2EF0081B583 /* Layout1View.xib in Resources */,
 				D95BC761241FC57C00C1D2FC /* LaunchScreen.storyboard in Resources */,
 				D90E927F2434A45B0081B583 /* Main.storyboard in Resources */,
+				D90E92852434CD330081B583 /* ThirstySoftRegular.otf in Resources */,
 				D90E92612434897A0081B583 /* Layout2View.xib in Resources */,
 				D95BC75E241FC57C00C1D2FC /* Assets.xcassets in Resources */,
+				D90E92872434CD330081B583 /* Delm-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,10 +24,17 @@
                             </constraints>
                             <state key="normal" image="Plus"/>
                         </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-I9-Jya" userLabel="UpRectImage">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="113"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IUd-I9-Jya" secondAttribute="trailing" id="4Aa-fG-ptm"/>
+                        <constraint firstItem="IUd-I9-Jya" firstAttribute="leading" secondItem="Tcm-5o-pJa" secondAttribute="leading" id="Jz1-og-lZ8"/>
                         <constraint firstAttribute="width" secondItem="Tcm-5o-pJa" secondAttribute="height" multiplier="87:41" id="gVF-ri-HhC"/>
+                        <constraint firstItem="IUd-I9-Jya" firstAttribute="top" secondItem="Tcm-5o-pJa" secondAttribute="top" id="geA-Dd-qx7"/>
+                        <constraint firstAttribute="bottom" secondItem="IUd-I9-Jya" secondAttribute="bottom" id="mSK-AJ-YPM"/>
                         <constraint firstItem="I1j-qW-FDM" firstAttribute="centerY" secondItem="Tcm-5o-pJa" secondAttribute="centerY" id="o61-oz-5TE"/>
                         <constraint firstItem="I1j-qW-FDM" firstAttribute="centerX" secondItem="Tcm-5o-pJa" secondAttribute="centerX" id="oqG-Qj-LWq"/>
                     </constraints>
@@ -46,11 +53,18 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0p-6c-gwI" userLabel="DownLeftImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="YQK-MM-GVh" firstAttribute="centerX" secondItem="c47-sk-cSv" secondAttribute="centerX" id="4oe-Wx-5WK"/>
+                                <constraint firstItem="p0p-6c-gwI" firstAttribute="leading" secondItem="c47-sk-cSv" secondAttribute="leading" id="K8c-FI-Js3"/>
+                                <constraint firstAttribute="bottom" secondItem="p0p-6c-gwI" secondAttribute="bottom" id="OyG-Zq-ZY9"/>
                                 <constraint firstItem="YQK-MM-GVh" firstAttribute="centerY" secondItem="c47-sk-cSv" secondAttribute="centerY" id="ads-dq-0ib"/>
+                                <constraint firstItem="p0p-6c-gwI" firstAttribute="top" secondItem="c47-sk-cSv" secondAttribute="top" id="bsd-fc-gxg"/>
+                                <constraint firstAttribute="trailing" secondItem="p0p-6c-gwI" secondAttribute="trailing" id="tCH-QG-ZQz"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGW-w3-wBJ" userLabel="DownRightSquare">
@@ -64,10 +78,17 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAb-a8-VHr" userLabel="DownRightImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="QAb-a8-VHr" firstAttribute="top" secondItem="lGW-w3-wBJ" secondAttribute="top" id="RVL-xO-I3V"/>
+                                <constraint firstAttribute="trailing" secondItem="QAb-a8-VHr" secondAttribute="trailing" id="UFu-vM-dJJ"/>
+                                <constraint firstAttribute="bottom" secondItem="QAb-a8-VHr" secondAttribute="bottom" id="Y4H-za-Gsb"/>
                                 <constraint firstItem="JZn-OH-zoT" firstAttribute="centerY" secondItem="lGW-w3-wBJ" secondAttribute="centerY" id="kmh-Up-f8m"/>
+                                <constraint firstItem="QAb-a8-VHr" firstAttribute="leading" secondItem="lGW-w3-wBJ" secondAttribute="leading" id="oPk-f0-a1J"/>
                                 <constraint firstItem="JZn-OH-zoT" firstAttribute="centerX" secondItem="lGW-w3-wBJ" secondAttribute="centerX" id="pPs-au-cww"/>
                             </constraints>
                         </view>
@@ -91,7 +112,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="100.35211267605634" y="-9.375"/>
+            <point key="canvasLocation" x="99.850074962518747" y="-9.5999999999999996"/>
         </view>
     </objects>
     <resources>

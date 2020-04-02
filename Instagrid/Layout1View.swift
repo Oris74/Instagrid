@@ -17,5 +17,5 @@ class Layout1View: UIView {
         // Drawing code
     }
     */
-
+private var rectangle
 }
