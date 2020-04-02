@@ -18,4 +18,13 @@ class Layout3View: UIView {
     }
     */
 
+    @IBOutlet weak var ButtonUpLeft: UIButton!
+    @IBOutlet weak var ButtonUpRight: UIButton!
+    @IBOutlet weak var ButtonDownLeft: UIButton!
+    @IBOutlet weak var ButtonDownRight: UIButton!
+    
+    
+    
+    
+
 }

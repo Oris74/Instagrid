@@ -49,6 +49,7 @@
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="YQK-MM-GVh" secondAttribute="height" multiplier="1:1" id="FcX-Ci-vkE"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="UYd-Oo-67g"/>
                                         <constraint firstAttribute="width" constant="45" id="kyA-7q-O8b"/>
                                     </constraints>
                                     <state key="normal" image="Plus"/>
@@ -112,6 +113,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ButtonDownLeft" destination="YQK-MM-GVh" id="iIH-zP-tWy"/>
+                <outlet property="ButtonDownRight" destination="JZn-OH-zoT" id="yog-oN-ZH9"/>
+                <outlet property="ButtonUpRect" destination="I1j-qW-FDM" id="Oxc-Nu-FqY"/>
+            </connections>
             <point key="canvasLocation" x="99.850074962518747" y="-9.5999999999999996"/>
         </view>
     </objects>

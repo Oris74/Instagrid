@@ -128,15 +128,11 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="oHL-NI-wEp" secondAttribute="bottom" constant="20" symbolic="YES" id="3AZ-bw-irO"/>
                         <constraint firstItem="eOt-RV-E2a" firstAttribute="leading" secondItem="oHL-NI-wEp" secondAttribute="trailing" constant="15" id="9dL-U4-k3L"/>
                         <constraint firstItem="eOt-RV-E2a" firstAttribute="height" secondItem="oHL-NI-wEp" secondAttribute="height" id="VWw-jX-4j0"/>
                         <constraint firstItem="eOt-RV-E2a" firstAttribute="width" secondItem="oHL-NI-wEp" secondAttribute="width" id="be3-8F-YXi"/>
-                        <constraint firstItem="oHL-NI-wEp" firstAttribute="top" secondItem="Hzr-4o-Owl" secondAttribute="top" constant="20" symbolic="YES" id="dxC-v8-1VI"/>
                         <constraint firstAttribute="trailing" secondItem="eOt-RV-E2a" secondAttribute="trailing" id="nIs-80-0e4"/>
-                        <constraint firstItem="eOt-RV-E2a" firstAttribute="top" secondItem="Hzr-4o-Owl" secondAttribute="top" constant="20" symbolic="YES" id="uT6-aw-cO8"/>
                         <constraint firstAttribute="width" secondItem="Hzr-4o-Owl" secondAttribute="height" multiplier="354:167" id="vUh-6r-RKz"/>
-                        <constraint firstAttribute="bottom" secondItem="eOt-RV-E2a" secondAttribute="bottom" constant="20" symbolic="YES" id="x1f-EZ-n1H"/>
                         <constraint firstItem="oHL-NI-wEp" firstAttribute="leading" secondItem="Hzr-4o-Owl" secondAttribute="leading" id="xrx-wL-cDR"/>
                     </constraints>
                 </stackView>
@@ -154,6 +150,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ButtonDownLeft" destination="NsO-Zm-H3A" id="pDg-r4-h8G"/>
+                <outlet property="ButtonDownRight" destination="MH9-cF-96C" id="snH-7J-CuV"/>
+                <outlet property="ButtonUpLeft" destination="J9c-jp-ibb" id="2b8-Ff-9gK"/>
+                <outlet property="ButtonUpRight" destination="dZo-gV-M3b" id="2ZW-Zx-9vo"/>
+            </connections>
             <point key="canvasLocation" x="-343" y="-101"/>
         </view>
     </objects>

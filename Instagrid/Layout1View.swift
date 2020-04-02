@@ -17,5 +17,8 @@ class Layout1View: UIView {
         // Drawing code
     }
     */
-private var rectangle
+    @IBOutlet weak var ButtonUpRect: UIButton!
+    @IBOutlet weak var ButtonDownLeft: UIButton!
+    @IBOutlet weak var ButtonDownRight: UIButton!
+    
 }
