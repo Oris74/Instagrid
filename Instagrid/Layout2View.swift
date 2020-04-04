@@ -10,24 +10,9 @@ import UIKit
 
 class Layout2View: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet var images: [UIImageView]!
+    @IBOutlet var Buttons: [UIButton]!
+    @IBAction func buttonsTapped(_ sender: UIButton) {
     }
-    */
-    @IBOutlet weak var imageUpLeft: UIImageView!
-    @IBOutlet weak var imageUpRight: UIImageView!
-    @IBOutlet weak var imageDownRect: UIImageView!
-    
-    
-    @IBAction func clickOnButtonUpLeft(_ sender: Any) {
-    }
-    @IBAction func clickOnButtonUpRight(_ sender: Any) {
-    }
-    @IBAction func clickObuttonDownRect(_ sender: Any) {
-    }
-    
     
 }

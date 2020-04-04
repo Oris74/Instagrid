@@ -27,7 +27,7 @@
 		D90E925C2433B2EF0081B583 /* Layout1View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout1View.xib; sourceTree = "<group>"; };
 		D90E92602434897A0081B583 /* Layout2View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout2View.xib; sourceTree = "<group>"; };
 		D90E92622434898D0081B583 /* Layout3View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout3View.xib; sourceTree = "<group>"; };
-		D90E927824349DCA0081B583 /* Layout1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout1View.swift; sourceTree = "<group>"; };
+		D90E927824349DCA0081B583 /* Layout1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout1View.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		D90E927A24349E160081B583 /* Layout2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout2View.swift; sourceTree = "<group>"; };
 		D90E927C24349E5C0081B583 /* Layout3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout3View.swift; sourceTree = "<group>"; };
 		D90E927E2434A45B0081B583 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };

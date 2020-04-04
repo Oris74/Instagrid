@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Layout1View">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Layout1View" customModule="Instagrid" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -24,7 +24,7 @@
                             </constraints>
                             <state key="normal" image="Plus"/>
                             <connections>
-                                <action selector="clickOnButtonUpRect:" destination="iN0-l3-epB" eventType="touchUpInside" id="mdb-nW-7cF"/>
+                                <action selector="ButtonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lZH-oh-Jkq"/>
                             </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-I9-Jya" userLabel="UpRectImage">
@@ -48,7 +48,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c47-sk-cSv" userLabel="DownLeftSquare">
                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-MM-GVh" userLabel="PlusDownLeftSquare">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-MM-GVh" userLabel="PlusDownLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="YQK-MM-GVh" secondAttribute="height" multiplier="1:1" id="FcX-Ci-vkE"/>
@@ -57,7 +57,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="clickOnButtonLeftDown:" destination="iN0-l3-epB" eventType="touchUpInside" id="QQW-xi-h9j"/>
+                                        <action selector="ButtonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hPy-o7-foV"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0p-6c-gwI" userLabel="DownLeftImage">
@@ -77,7 +77,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGW-w3-wBJ" userLabel="DownRightSquare">
                             <rect key="frame" x="127.5" y="0.0" width="112.5" height="113.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZn-OH-zoT" userLabel="PlusDownRightSquare">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZn-OH-zoT" userLabel="PlusDownRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="JZn-OH-zoT" secondAttribute="height" multiplier="1:1" id="hxE-JJ-5KP"/>
@@ -85,7 +85,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="clickOnButtonRightDown:" destination="iN0-l3-epB" eventType="touchUpInside" id="WVL-qj-fRL"/>
+                                        <action selector="ButtonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="3qS-cn-mCT"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAb-a8-VHr" userLabel="DownRightImage">
@@ -123,11 +123,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="ButtonDownLeft" destination="YQK-MM-GVh" id="iIH-zP-tWy"/>
-                <outlet property="ImageUpRect" destination="IUd-I9-Jya" id="osT-po-WKr"/>
-                <outlet property="imageDownLeft" destination="p0p-6c-gwI" id="qWA-QT-Yez"/>
-                <outlet property="imageDownRight" destination="QAb-a8-VHr" id="plg-zh-gSF"/>
-                <outlet property="imageUpRect" destination="IUd-I9-Jya" id="0lZ-Tn-xhM"/>
+                <outletCollection property="images" destination="p0p-6c-gwI" collectionClass="NSMutableArray" id="omj-LV-L05"/>
+                <outletCollection property="images" destination="QAb-a8-VHr" collectionClass="NSMutableArray" id="337-zK-k56"/>
+                <outletCollection property="Buttons" destination="I1j-qW-FDM" collectionClass="NSMutableArray" id="zct-T0-Gxk"/>
+                <outletCollection property="Buttons" destination="I1j-qW-FDM" collectionClass="NSMutableArray" id="ft9-eT-7PI"/>
+                <outletCollection property="Buttons" destination="YQK-MM-GVh" collectionClass="NSMutableArray" id="Ko6-UD-0A4"/>
+                <outletCollection property="Buttons" destination="JZn-OH-zoT" collectionClass="NSMutableArray" id="rzj-ob-eQA"/>
+                <outletCollection property="images" destination="IUd-I9-Jya" collectionClass="NSMutableArray" id="f8e-tD-prK"/>
             </connections>
             <point key="canvasLocation" x="99.850074962518747" y="-9.5999999999999996"/>
         </view>

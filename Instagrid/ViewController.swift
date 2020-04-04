@@ -10,66 +10,99 @@ import UIKit
 
 class ViewController: UIViewController {
 
-     
-   @IBOutlet weak var displayPattern: UIView!
     
-   @IBOutlet weak var buttonPortraitLeft: UIButton!
-   @IBOutlet weak var buttonPortraitRight: UIButton!
-   @IBOutlet weak var buttonPortraitCentral: UIButton!
+    @IBOutlet weak var displayPattern: UIView!
     
+    @IBOutlet var buttonsPortrait: [UIButton]!
+    @IBOutlet var buttonsLandscape: [UIButton]!
+    @IBAction func buttonsPortraitTapped(_ sender: UIButton) {
+        updateButton(buttonTapped: sender.tag)
+        updatePattern(pattern: ViewController.Pattern(rawValue: sender.tag)!)
+    }
     
-   @IBOutlet weak var buttonLandscapeUp: UIButton!
-   @IBOutlet weak var buttonLandscapeMiddle: UIButton!
-   @IBOutlet weak var buttonLandscapeDown: UIButton!
+    @IBAction func buttonsLandscapeTapped(_ sender: UIButton) {
+        updateButton(buttonTapped: sender.tag)
+        updatePattern(pattern: ViewController.Pattern(rawValue: sender.tag)!)
+    }
+    
+    private enum Pattern: Int {
+        case pattern1,pattern2,pattern3
+    }
+    
+    private enum Orientation:String {
+        case portrait,landscape
+    }
+        
+    private var deviceOrientation:Orientation = .portrait
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        updatePattern(pattern: .pattern3)
     }
 
-    @IBAction func didTouchButtonPortraitLeft(_ sender: Any) {
-        buttonPortraitLeft.setImage(UIImage(named:"Selected.png"), for: .normal)
-        buttonPortraitCentral.setImage(nil, for: .normal)
-        buttonPortraitRight.setImage(nil, for: .normal)
+   
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
         
+        coordinator.animate(alongsideTransition: { (context) in
+            guard let windowInterfaceOrientation = self.windowInterfaceOrientation else { return }
+            
+            if windowInterfaceOrientation.isLandscape {
+                self.deviceOrientation = .landscape
+            } else {
+                self.deviceOrientation = .portrait
+            }
+        })
     }
     
-    @IBAction func didTouchButtonPortraitCentral(_ sender: Any) {
-        buttonPortraitLeft.setImage(nil, for: .normal)
-        buttonPortraitCentral.setImage(UIImage(named: "Selected.png"), for: .normal)
-        buttonPortraitRight.setImage(nil, for: .normal)
-        
-    }
-    
-    @IBAction func didTouchButtonPortraitRight(_ sender: Any) {
-        buttonPortraitLeft.setImage(nil, for: .normal)
-        buttonPortraitCentral.setImage(nil, for: .normal)
-        buttonPortraitRight.setImage(UIImage(named:"Selected.png"), for: .normal)
-        
-    }
-    
-    @IBAction func didTouchButtonLandscapeUp(_ sender: Any) {
-        buttonLandscapeUp.setImage(UIImage(named:"Selected.png"), for: .normal)
-        buttonLandscapeMiddle.setImage(nil, for: .normal)
-        buttonLandscapeDown.setImage(nil, for: .normal)
-        
-    }
-    @IBAction func didTouchButtonLandscapeMiddle(_ sender: Any) {
-        buttonLandscapeUp.setImage(nil, for: .normal)
-        buttonLandscapeMiddle.setImage(UIImage(named:"Selected.png"), for: .normal)
-        buttonLandscapeDown.setImage(nil, for: .normal)
-        
-    }
-    @IBAction func didTouchButtonLandscapeDown(_ sender: Any) {
-        buttonLandscapeUp.setImage(nil, for: .normal)
-        buttonLandscapeMiddle.setImage(nil, for: .normal)
-        buttonLandscapeDown.setImage(UIImage(named:"Selected.png"), for: .normal)
-        
+    private var windowInterfaceOrientation: UIInterfaceOrientation? {
+        return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
     }
     
     
-
+    private func  updatePattern(pattern: Pattern) {
+        switch pattern {
+        case .pattern1:
+            if let currentPattern = Bundle.main.loadNibNamed("Layout1View", owner: displayPattern, options: nil)?.first as?Layout1View {
+                displayPattern.addSubview(currentPattern)
+                // currentPattern.centerXAnchor.constraint(equalTo: displayPattern.centerXAnchor).isActive = true
+                //  currentPattern.centerYAnchor.constraint(equalTo: displayPattern.centerYAnchor).isActive = true
+              }
+        case .pattern2:
+            if let currentPattern = Bundle.main.loadNibNamed("Layout2View", owner: displayPattern, options: nil)?.first as?Layout2View {
+                displayPattern.addSubview(currentPattern)
+            }
+        case .pattern3:
+            if let currentPattern = Bundle.main.loadNibNamed("Layout3View", owner: displayPattern, options: nil)?.first as?Layout3View {
+                displayPattern.addSubview(currentPattern)
+            }
+        }
+    }
     
+    
+    private func updateButton (buttonTapped: Int ) {
+        switch deviceOrientation {
+        case .portrait:
+            for button in 0...2 {
+                       if button == buttonTapped {
+                        buttonsPortrait[button].setImage(
+                            UIImage(named:"Selected.png"), for: .normal)
+                       } else {
+                        buttonsPortrait[button].setImage(nil, for: .normal)
+                       }
+                   }
+        case .landscape:
+            for button in 0...2 {
+                if button == buttonTapped {
+                    buttonsLandscape[button].setImage(
+                        UIImage(named:"Selected.png"), for: .normal)
+                } else {
+                    buttonsLandscape[button].setImage(nil, for: .normal)
+                }
+            }
+        }
+    }
 }
 

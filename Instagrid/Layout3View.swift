@@ -9,32 +9,8 @@
 import UIKit
 
 class Layout3View: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet var images: [UIImageView]!
+    @IBOutlet var buttons: [UIButton]!
+    @IBAction func buttonsTapped(_ sender: UIButton) {
     }
-    */
-    
-    @IBOutlet weak var imageUpLeft: UIImageView!
-    @IBOutlet weak var imageUpRight: UIImageView!
-    @IBOutlet weak var imageDownLeft: UIImageView!
-    @IBOutlet weak var imageDownRight: UIImageView!
-    
-    
-    @IBAction func clickOnButtonUpLeft(_ sender: Any) {
-    }
-    
-    @IBAction func clickOnButtonUpRight(_ sender: Any) {
-    }
-    
-    @IBAction func clickOnButtonDownLeft(_ sender: Any) {
-    }
-
-    
-    @IBAction func clickOnButtonDownRight(_ sender: Any) {
-    }
-
 }
