@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,10 +43,10 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-De-llZ" userLabel="StackDown">
-                    <rect key="frame" x="0.0" y="128" width="240" height="113.5"/>
+                    <rect key="frame" x="0.0" y="127" width="240" height="113"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c47-sk-cSv" userLabel="DownLeftSquare">
-                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                             <subviews>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-MM-GVh" userLabel="PlusDownLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
@@ -61,7 +61,7 @@
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0p-6c-gwI" userLabel="DownLeftImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,7 +75,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGW-w3-wBJ" userLabel="DownRightSquare">
-                            <rect key="frame" x="127.5" y="0.0" width="112.5" height="113.5"/>
+                            <rect key="frame" x="127.5" y="0.0" width="112.5" height="113"/>
                             <subviews>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZn-OH-zoT" userLabel="PlusDownRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
@@ -89,7 +89,7 @@
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAb-a8-VHr" userLabel="DownRightImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -115,9 +115,9 @@
                 <constraint firstItem="Tcm-5o-pJa" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="4Nb-ce-m9w"/>
                 <constraint firstItem="Tcm-5o-pJa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IzV-qD-1u7"/>
                 <constraint firstItem="Tcm-5o-pJa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KIM-wj-7Ni"/>
-                <constraint firstItem="L8D-De-llZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SD7-aR-zXW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="L8D-De-llZ" secondAttribute="bottom" id="LIH-Qt-92i"/>
+                <constraint firstItem="L8D-De-llZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SD7-aR-zXW"/>
                 <constraint firstItem="L8D-De-llZ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="bW0-Pr-cmh"/>
-                <constraint firstItem="L8D-De-llZ" firstAttribute="top" secondItem="Tcm-5o-pJa" secondAttribute="bottom" constant="15" id="e55-SY-uaW"/>
                 <constraint firstItem="L8D-De-llZ" firstAttribute="width" secondItem="L8D-De-llZ" secondAttribute="height" multiplier="354:167" id="tlL-zq-8ft"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

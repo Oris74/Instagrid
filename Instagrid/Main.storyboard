@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-0D-NKm">
-                                <rect key="frame" x="275" y="14" width="117" height="39"/>
+                                <rect key="frame" x="128.5" y="14" width="118.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="GRX-z8-AZM"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06X-8R-eHT">
-                                <rect key="frame" x="5" y="225.5" width="180.5" height="61"/>
+                                <rect key="frame" x="5" y="225.5" width="180.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-Ub-ivK" userLabel="DisplayPattern" customClass="Layout1View" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="187.5" y="63" width="292" height="292"/>
+                                <rect key="frame" x="25" y="171" width="325" height="325"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ppz-Ub-ivK" secondAttribute="height" multiplier="1:1" id="sx5-87-J7c"/>
@@ -188,7 +188,6 @@
                             <constraint firstItem="06X-8R-eHT" firstAttribute="centerX" secondItem="WBZ-Rv-KAh" secondAttribute="centerX" id="joP-Yu-v1A"/>
                             <constraint firstItem="06X-8R-eHT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="kBa-ll-bQA"/>
                             <constraint firstItem="Ppz-Ub-ivK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kVG-6q-CBy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ppz-Ub-ivK" secondAttribute="trailing" constant="15" id="o3q-EN-j6n"/>
                             <constraint firstItem="Ppz-Ub-ivK" firstAttribute="leading" secondItem="06X-8R-eHT" secondAttribute="trailing" constant="2" id="qJQ-v2-JGZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ppz-Ub-ivK" secondAttribute="trailing" constant="25" id="rST-QV-hlH"/>
                             <constraint firstItem="OK6-3G-kqU" firstAttribute="top" secondItem="WTa-km-ka8" secondAttribute="bottom" id="rTF-FG-vuE"/>
@@ -208,12 +207,19 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Qqb-Tg-2hy"/>
+                                <exclude reference="fjd-zf-eoK"/>
                                 <exclude reference="rTF-FG-vuE"/>
                                 <exclude reference="Kor-uM-POr"/>
                                 <exclude reference="joP-Yu-v1A"/>
                                 <exclude reference="kBa-ll-bQA"/>
+                                <exclude reference="ZX8-Jz-0Vq"/>
+                                <exclude reference="cHV-LB-TMS"/>
+                                <exclude reference="gwd-4j-5Og"/>
+                                <exclude reference="jAA-Rh-tgU"/>
+                                <exclude reference="rST-QV-hlH"/>
                                 <exclude reference="7Pl-Nh-rfO"/>
                                 <exclude reference="C4S-H2-UmP"/>
+                                <exclude reference="DAj-V0-fYS"/>
                                 <exclude reference="FSG-cO-TRB"/>
                                 <exclude reference="P17-Ff-OXb"/>
                                 <exclude reference="akh-gO-lXA"/>
@@ -224,12 +230,6 @@
                                 <exclude reference="3lb-da-hCv"/>
                                 <exclude reference="fML-7Z-FjF"/>
                                 <exclude reference="wqy-zl-bz8"/>
-                                <exclude reference="ZX8-Jz-0Vq"/>
-                                <exclude reference="cHV-LB-TMS"/>
-                                <exclude reference="gwd-4j-5Og"/>
-                                <exclude reference="jAA-Rh-tgU"/>
-                                <exclude reference="o3q-EN-j6n"/>
-                                <exclude reference="rST-QV-hlH"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -243,16 +243,16 @@
                                 <include reference="Kor-uM-POr"/>
                                 <include reference="joP-Yu-v1A"/>
                                 <include reference="kBa-ll-bQA"/>
+                                <include reference="ZX8-Jz-0Vq"/>
+                                <include reference="cHV-LB-TMS"/>
+                                <include reference="jAA-Rh-tgU"/>
                                 <include reference="7Pl-Nh-rfO"/>
                                 <exclude reference="C4S-H2-UmP"/>
+                                <include reference="DAj-V0-fYS"/>
                                 <include reference="FSG-cO-TRB"/>
                                 <include reference="qJQ-v2-JGZ"/>
                                 <include reference="940-mj-o4o"/>
                                 <include reference="z41-kH-EH1"/>
-                                <include reference="ZX8-Jz-0Vq"/>
-                                <include reference="cHV-LB-TMS"/>
-                                <include reference="jAA-Rh-tgU"/>
-                                <exclude reference="o3q-EN-j6n"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -264,15 +264,16 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="Qqb-Tg-2hy"/>
+                                <include reference="fjd-zf-eoK"/>
                                 <include reference="rTF-FG-vuE"/>
+                                <include reference="gwd-4j-5Og"/>
+                                <include reference="rST-QV-hlH"/>
                                 <include reference="P17-Ff-OXb"/>
                                 <include reference="akh-gO-lXA"/>
                                 <include reference="kVG-6q-CBy"/>
                                 <include reference="3lb-da-hCv"/>
                                 <include reference="fML-7Z-FjF"/>
                                 <include reference="wqy-zl-bz8"/>
-                                <include reference="gwd-4j-5Og"/>
-                                <include reference="rST-QV-hlH"/>
                             </mask>
                         </variation>
                     </view>

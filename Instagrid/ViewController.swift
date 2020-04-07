@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     
     @IBOutlet weak var displayPattern: UIView!
@@ -17,16 +17,25 @@ class ViewController: UIViewController {
     @IBOutlet var buttonsLandscape: [UIButton]!
     @IBAction func buttonsPortraitTapped(_ sender: UIButton) {
         updateButton(buttonTapped: sender.tag)
-        updatePattern(pattern: ViewController.Pattern(rawValue: sender.tag)!)
+        updatePattern(selectedPattern: ViewController.Pattern(rawValue: sender.tag)!)
     }
     
     @IBAction func buttonsLandscapeTapped(_ sender: UIButton) {
         updateButton(buttonTapped: sender.tag)
-        updatePattern(pattern: ViewController.Pattern(rawValue: sender.tag)!)
+        updatePattern(selectedPattern: ViewController.Pattern(rawValue: sender.tag)!)
     }
+    var imagePicker = UIImagePickerController()
     
     private enum Pattern: Int {
         case pattern1,pattern2,pattern3
+        static let mapper: [Pattern: String] = [
+            .pattern1: "Layout1View",
+            .pattern2: "Layout2View",
+            .pattern3: "Layout3View"
+        ]
+        var string: String {
+            return Pattern.mapper[self]!
+        }
     }
     
     private enum Orientation:String {
@@ -38,10 +47,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        updatePattern(pattern: .pattern3)
+        updatePattern(selectedPattern: .pattern2)
+        imagePicker.delegate = self
     }
 
-   
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
@@ -62,26 +71,68 @@ class ViewController: UIViewController {
     }
     
     
-    private func  updatePattern(pattern: Pattern) {
-        switch pattern {
+    private func  updatePattern(selectedPattern: Pattern) {
+        let layoutView:UIView
+        print("\(selectedPattern)\n \(selectedPattern.string)")
+        switch selectedPattern {
         case .pattern1:
-            if let currentPattern = Bundle.main.loadNibNamed("Layout1View", owner: displayPattern, options: nil)?.first as?Layout1View {
-                displayPattern.addSubview(currentPattern)
-                // currentPattern.centerXAnchor.constraint(equalTo: displayPattern.centerXAnchor).isActive = true
-                //  currentPattern.centerYAnchor.constraint(equalTo: displayPattern.centerYAnchor).isActive = true
-              }
+            guard let pattern = Bundle.main.loadNibNamed(
+                selectedPattern.string, owner: displayPattern,
+                options: nil)?.first as? Layout1View else { return }
+            layoutView = pattern
         case .pattern2:
-            if let currentPattern = Bundle.main.loadNibNamed("Layout2View", owner: displayPattern, options: nil)?.first as?Layout2View {
-                displayPattern.addSubview(currentPattern)
-            }
+            guard let pattern = Bundle.main.loadNibNamed(
+                selectedPattern.string, owner: displayPattern,
+                options: nil)?.first as? Layout2View else { return }
+              layoutView = pattern
         case .pattern3:
-            if let currentPattern = Bundle.main.loadNibNamed("Layout3View", owner: displayPattern, options: nil)?.first as?Layout3View {
-                displayPattern.addSubview(currentPattern)
-            }
+            guard let pattern = Bundle.main.loadNibNamed(
+                selectedPattern.string, owner: displayPattern,
+                options: nil)?.first as? Layout3View else { return }
+              layoutView = pattern
         }
+            
+        displayPattern.addSubview(layoutView)
+        addLayoutConstraint(parentView: displayPattern, childView: layoutView)
     }
     
-    
+    private func addLayoutConstraint(parentView: UIView, childView: UIView) {
+        childView.translatesAutoresizingMaskIntoConstraints = false
+        let leftSideConstraint = NSLayoutConstraint(item: parentView,
+                                                    attribute: .left,
+                                                    relatedBy: .equal,
+                                                    toItem: childView,
+                                                    attribute: .left,
+                                                    multiplier: 1.0,
+                                                    constant: -15.0
+        )
+        let bottomConstraint = NSLayoutConstraint(item: parentView,
+                                                  attribute: .bottom,
+                                                  relatedBy: .equal,
+                                                  toItem: childView,
+                                                  attribute: .bottom,
+                                                  multiplier: 1.0,
+                                                  constant: 15.0
+        )
+        let rightConstraint = NSLayoutConstraint(item: parentView,
+                                                 attribute: .right,
+                                                 relatedBy: .equal,
+                                                 toItem: childView,
+                                                 attribute: .right,
+                                                 multiplier: 1.0,
+                                                 constant: 15.0
+        )
+        let topConstraint = NSLayoutConstraint(item: parentView,
+                                               attribute: .top,
+                                               relatedBy: .equal,
+                                               toItem: childView,
+                                               attribute: .top,
+                                               multiplier: 1.0,
+                                               constant: -15.0
+        )
+        parentView.addConstraints([leftSideConstraint, bottomConstraint, rightConstraint, topConstraint])
+    }
+   
     private func updateButton (buttonTapped: Int ) {
         switch deviceOrientation {
         case .portrait:

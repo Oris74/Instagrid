@@ -40,6 +40,7 @@
 		D95BC75D241FC57C00C1D2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95BC760241FC57C00C1D2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95BC762241FC57C00C1D2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A93489243C6588009F9C0B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 				D90E927A24349E160081B583 /* Layout2View.swift */,
 				D90E927C24349E5C0081B583 /* Layout3View.swift */,
 				D95BC758241FC57A00C1D2FC /* ViewController.swift */,
+				D9A93489243C6588009F9C0B /* ImagePicker.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

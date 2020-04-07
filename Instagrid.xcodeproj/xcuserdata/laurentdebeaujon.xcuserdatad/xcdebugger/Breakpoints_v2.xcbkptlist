@@ -30,25 +30,9 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "updateButton(buttonTapped:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B2020AF-759C-4F82-985A-56EA00DD858B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "updatePattern(pattern:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "addLayoutConstraint(parentView:childView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +46,9 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "updateButton(buttonTapped:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "addLayoutConstraint(parentView:childView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

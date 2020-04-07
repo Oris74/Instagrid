@@ -9,11 +9,12 @@
 import UIKit
 
 class Layout1View: UIView {
-    
+   
     
     @IBOutlet var images: [UIImageView]!
     @IBOutlet var Buttons: [UIButton]!
     @IBAction func ButtonsTapped(_ sender: UIButton) {
+        
     }
     
   
