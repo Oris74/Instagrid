@@ -9,13 +9,24 @@
 import UIKit
 
 class Layout1View: UIView {
-   
+    weak var delegate:ViewDelegate?
     
-    @IBOutlet var images: [UIImageView]!
-    @IBOutlet var Buttons: [UIButton]!
-    @IBAction func ButtonsTapped(_ sender: UIButton) {
-        
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+   
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    
+    @IBAction func button1Tapped(_ sender: UIButton) {
+        delegate!.didButtonTapped1(sender: sender)
+       }
+    @IBAction func button2Tapped(_ sender: UIButton) {
+        delegate!.didButtonTapped2(sender: sender)
+    }
+    @IBAction func button3Tapped(_ sender: UIButton) {
+        delegate!.didButtonTapped3(sender: sender)
     }
     
-  
 }

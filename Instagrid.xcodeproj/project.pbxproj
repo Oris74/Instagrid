@@ -16,6 +16,7 @@
 		D90E927F2434A45B0081B583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90E927E2434A45B0081B583 /* Main.storyboard */; };
 		D90E92852434CD330081B583 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D90E92822434CD320081B583 /* ThirstySoftRegular.otf */; };
 		D90E92872434CD330081B583 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D90E92842434CD330081B583 /* Delm-Medium.otf */; };
+		D91FE27C2442216200536B7B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A93489243C6588009F9C0B /* ImagePicker.swift */; };
 		D95BC755241FC57A00C1D2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC754241FC57A00C1D2FC /* AppDelegate.swift */; };
 		D95BC757241FC57A00C1D2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC756241FC57A00C1D2FC /* SceneDelegate.swift */; };
 		D95BC759241FC57A00C1D2FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BC758241FC57A00C1D2FC /* ViewController.swift */; };
@@ -204,6 +205,7 @@
 				D90E927B24349E160081B583 /* Layout2View.swift in Sources */,
 				D95BC759241FC57A00C1D2FC /* ViewController.swift in Sources */,
 				D95BC755241FC57A00C1D2FC /* AppDelegate.swift in Sources */,
+				D91FE27C2442216200536B7B /* ImagePicker.swift in Sources */,
 				D95BC757241FC57A00C1D2FC /* SceneDelegate.swift in Sources */,
 				D90E927D24349E5C0081B583 /* Layout3View.swift in Sources */,
 				D90E927924349DCA0081B583 /* Layout1View.swift in Sources */,

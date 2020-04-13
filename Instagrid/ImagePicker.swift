@@ -12,7 +12,7 @@ public protocol ImagePickerDelegate: class {
     func didSelect(image: UIImage?)
 }
 
-open class ImagePicker2: NSObject {
+open class ImagePicker: NSObject {
     private let pickerController: UIImagePickerController
     private weak var presentationController: UIViewController?
     private weak var delegate: ImagePickerDelegate?
@@ -45,12 +45,12 @@ open class ImagePicker2: NSObject {
 
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
-        if let action = self.action(for: .camera, title: "Take photo") {
+     /*   if let action = self.action(for: .camera, title: "Take photo") {
             alertController.addAction(action)
         }
         if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
             alertController.addAction(action)
-        }
+        }*/
         if let action = self.action(for: .photoLibrary, title: "Photo library") {
             alertController.addAction(action)
         }

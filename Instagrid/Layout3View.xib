@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,9 +19,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrv-xC-x51" userLabel="UpLeftSquare">
                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-JB-0cr" userLabel="UpLeftImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-jp-ibb" userLabel="PlusUpLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -30,9 +27,12 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="buttonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="AXu-CY-vGP"/>
+                                        <action selector="button1Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xy8-sF-eyM"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-JB-0cr" userLabel="UpLeftImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -47,9 +47,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slm-bQ-JwS" userLabel="UpRightSquare">
                             <rect key="frame" x="127.5" y="0.0" width="112.5" height="113"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-uW-jcn" userLabel="UpRightImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
-                                </imageView>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-gV-M3b" userLabel="PlusUpRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -58,9 +55,12 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="buttonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="5TR-5H-SN5"/>
+                                        <action selector="button2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="SNi-0v-14h"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-uW-jcn" userLabel="UpRightImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -85,9 +85,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHL-NI-wEp" userLabel="DownLeftSquare">
                             <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-eH-uB3" userLabel="DownLeftImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
-                                </imageView>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-Zm-H3A" userLabel="PlusDownLeftSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -96,9 +93,12 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="buttonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="0sc-m1-NmZ"/>
+                                        <action selector="button3Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="ni4-kF-TNP"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-eH-uB3" userLabel="DownLeftImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -113,9 +113,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-RV-E2a" userLabel="DownRightSquare">
                             <rect key="frame" x="127.5" y="0.0" width="112.5" height="113"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fA-TB-sMl" userLabel="DownRightImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
-                                </imageView>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MH9-cF-96C" userLabel="PlusDownRightSquare">
                                     <rect key="frame" x="34" y="34" width="45" height="45"/>
                                     <constraints>
@@ -124,9 +121,12 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="buttonsTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="25B-EE-UCf"/>
+                                        <action selector="button4Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hIg-aL-W2A"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fA-TB-sMl" userLabel="DownRightImage">
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="113"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -163,14 +163,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outletCollection property="buttons" destination="J9c-jp-ibb" collectionClass="NSMutableArray" id="p1G-zA-S6x"/>
-                <outletCollection property="buttons" destination="dZo-gV-M3b" collectionClass="NSMutableArray" id="Ek6-Mn-CU9"/>
-                <outletCollection property="buttons" destination="NsO-Zm-H3A" collectionClass="NSMutableArray" id="PPp-Qb-gBz"/>
-                <outletCollection property="buttons" destination="MH9-cF-96C" collectionClass="NSMutableArray" id="7Tj-Fd-c0Y"/>
-                <outletCollection property="images" destination="pDL-JB-0cr" collectionClass="NSMutableArray" id="GZS-Cv-tsI"/>
-                <outletCollection property="images" destination="x2w-uW-jcn" collectionClass="NSMutableArray" id="CuW-TO-qZ7"/>
-                <outletCollection property="images" destination="hs7-eH-uB3" collectionClass="NSMutableArray" id="AZI-Ye-Jwe"/>
-                <outletCollection property="images" destination="9fA-TB-sMl" collectionClass="NSMutableArray" id="mon-ns-WM4"/>
+                <outlet property="button1" destination="J9c-jp-ibb" id="9NL-8e-YAy"/>
+                <outlet property="button2" destination="dZo-gV-M3b" id="PKj-i6-4kl"/>
+                <outlet property="button3" destination="NsO-Zm-H3A" id="Qcj-DK-K7s"/>
+                <outlet property="button4" destination="MH9-cF-96C" id="TU6-50-hjl"/>
+                <outlet property="image1" destination="pDL-JB-0cr" id="OdR-hy-35A"/>
+                <outlet property="image2" destination="x2w-uW-jcn" id="aTC-RV-gmm"/>
+                <outlet property="image3" destination="hs7-eH-uB3" id="ORE-Xy-x6y"/>
+                <outlet property="image4" destination="9fA-TB-sMl" id="yQE-dV-KRB"/>
             </connections>
             <point key="canvasLocation" x="-426" y="-1325"/>
         </view>
