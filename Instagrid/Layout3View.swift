@@ -35,4 +35,9 @@ class Layout3View: UIView {
     @IBAction func button4Tapped(_ sender: UIButton) {
         delegate!.didButtonTapped4(sender: sender)
        }
+    
+    func addImage(_ image: UIImage, at position: Int)
+    {
+        
+    }
 }

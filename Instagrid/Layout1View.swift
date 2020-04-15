@@ -30,3 +30,9 @@ class Layout1View: UIView {
     }
     
 }
+protocol ViewDelegate:AnyObject {
+    func didButtonTapped1(sender: UIButton)
+    func didButtonTapped2(sender: UIButton)
+    func didButtonTapped3(sender: UIButton)
+    func didButtonTapped4(sender: UIButton)
+}
