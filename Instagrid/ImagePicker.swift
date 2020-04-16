@@ -14,16 +14,13 @@ public protocol ImagePickerDelegate: class {
 
 open class ImagePicker: NSObject {
     private let pickerController: UIImagePickerController
-    private weak var presentationController: UIViewController?
-    private weak var delegate: ImagePickerDelegate?
+    weak var presentationController: UIViewController?
+    weak var delegate: ImagePickerDelegate?
 
-    public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
+    public override init() {
         self.pickerController = UIImagePickerController()
 
         super.init()
-
-        self.presentationController = presentationController
-        self.delegate = delegate
 
         self.pickerController.delegate = self
         self.pickerController.allowsEditing = true
@@ -42,27 +39,11 @@ open class ImagePicker: NSObject {
     }
 
     public func present(from sourceView: UIView) {
-
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-
-     /*   if let action = self.action(for: .camera, title: "Take photo") {
-            alertController.addAction(action)
-        }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
-            alertController.addAction(action)
-        }*/
         if let action = self.action(for: .photoLibrary, title: "Photo library") {
             alertController.addAction(action)
         }
-
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            alertController.popoverPresentationController?.sourceView = sourceView
-            alertController.popoverPresentationController?.sourceRect = sourceView.bounds
-            alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
-        }
-
         self.presentationController?.present(alertController, animated: true)
     }
 
@@ -79,7 +60,8 @@ open class ImagePicker: NSObject {
         }
 
         public func imagePickerController(_ picker: UIImagePickerController,
-                                          didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+                                          didFinishPickingMediaWithInfo info:
+                                        [UIImagePickerController.InfoKey: Any]) {
             guard let image = info[.editedImage] as? UIImage else {
                 return self.pickerController(picker, didSelectImage: nil)
             }

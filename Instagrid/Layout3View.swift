@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Layout3View: UIView {
+class Layout3View: UIView, LayoutDelegate {
     var delegate:ViewDelegate?
     
     @IBOutlet var button1: UIButton!
@@ -36,8 +36,28 @@ class Layout3View: UIView {
         delegate!.didButtonTapped4(sender: sender)
        }
     
-    func addImage(_ image: UIImage, at position: Int)
-    {
-        
+    var viewControllerParent:ViewController?
+    
+    override func didMoveToSuperview() {
+       self.viewControllerParent?.layoutDelegate = self
+       print("3->\(self)")
     }
+        
+    func displayImage(_ image:UIImage, at buttons: Int) {
+          switch buttons {
+          case 1:
+              self.image1.contentMode = .scaleAspectFill
+              self.image1.image = image
+          case 2:
+              self.image2.contentMode = .scaleAspectFill
+              self.image2.image = image
+          case 3:
+              self.image3.contentMode = .scaleAspectFill
+              self.image3.image = image
+          case 4:
+              self.image4.contentMode = .scaleAspectFill
+              self.image4.image = image
+          default: break
+          }
+      }
 }

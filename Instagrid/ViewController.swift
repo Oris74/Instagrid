@@ -9,87 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
-    func didSelectImage(image: UIImage?) {
-        if  let layout = currentLayout as? Layout1View {
-            switch didButtonTapped {
-            case 1:
-                layout.image1.contentMode = .scaleAspectFill
-                layout.image1.image = image
-            case 2:
-                layout.image2.contentMode = .scaleAspectFill
-                layout.image2.image = image
-            case 3:
-                layout.image3.contentMode = .scaleAspectFill
-                layout.image3.image = image
-            default: break
-            }
-        }
-        if  let layout = currentLayout as? Layout2View {
-                switch didButtonTapped {
-                case 1:
-                    layout.image1.contentMode = .scaleAspectFill
-                    layout.image1.image = image
-                case 2:
-                    layout.image2.contentMode = .scaleAspectFill
-                    layout.image2.image = image
-                case 3:
-                    layout.image3.contentMode = .scaleAspectFill
-                    layout.image3.image = image
-                default: break
-                }
-        }
-        if  let layout = currentLayout as? Layout3View {
-            switch didButtonTapped {
-            case 1:
-                layout.image1.contentMode = .scaleAspectFill
-                layout.image1.image = image
-            case 2:
-                layout.image2.contentMode = .scaleAspectFill
-                layout.image2.image = image
-            case 3:
-                layout.image3.contentMode = .scaleAspectFill
-                layout.image3.image = image
-            case 4:
-                layout.image4.contentMode = .scaleAspectFill
-                layout.image4.image = image
-            default: break
-            }
-        }
-     
-    }
-    
-    func didButtonTapped1(sender: UIButton) {
-        didButtonTapped = 1
-        self.imagePicker.present(from: sender)
-    }
-    
-    func didButtonTapped2(sender: UIButton) {
-        didButtonTapped = 2
-        self.imagePicker.present(from: sender)
-    }
-
-    func didButtonTapped3(sender: UIButton) {
-        didButtonTapped = 3
-        self.imagePicker.present(from: sender)
-      }
-
-    func didButtonTapped4(sender: UIButton) {
-        didButtonTapped = 4
-        self.imagePicker.present(from: sender)
-      }
    
     @IBOutlet weak var displayPattern: UIView!
     
     @IBOutlet var buttons: [UIButton]!
-    @IBAction func buttonsTapped(_ sender: UIButton) {
-        updatePattern(button: sender.tag)
-    }
-    
-    var imagePicker: ImagePicker!
+  
     var didButtonTapped:Int = 0
+    
     private var layout1 =
         Bundle.main.loadNibNamed("Layout1View", owner: nil,  options: nil)?.first as! Layout1View
-        
     private var layout2 =
         Bundle.main.loadNibNamed("Layout2View", owner: nil, options: nil)?.first as! Layout2View
     private var layout3 =
@@ -100,20 +28,47 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     private enum Orientation:String {
         case portrait,landscape
     }
-        
+    
+    var imagePicker:ImagePicker
+
+    weak var layoutDelegate:LayoutDelegate?
+    
     private var deviceOrientation:Orientation?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.imagePicker = ImagePicker()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        imagePicker.presentationController = self
+        imagePicker.delegate = self
+        layout1.delegate = self
+        layout1.viewControllerParent = self
+        layout2.delegate = self
+        layout2.viewControllerParent = self
+        layout3.delegate = self
+        layout3.viewControllerParent = self
+    }
+    
+    required init?(coder: NSCoder) {
+        self.imagePicker = ImagePicker()
+
+        super.init(coder:coder)
+        imagePicker.presentationController = self
+        imagePicker.delegate = self
+        
+        layout1.delegate = self
+        layout1.viewControllerParent = self
+        layout2.delegate = self
+        layout2.viewControllerParent = self
+        layout3.delegate = self
+        layout3.viewControllerParent = self
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateOrientation()
-        updatePattern(button: 2)
-        
-        layout1.delegate = self
-        layout2.delegate = self
-        layout3.delegate = self
-
-        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        updatePattern(button: 1)
 
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
@@ -125,6 +80,37 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
 
     }
 
+    
+    @IBAction func buttonsTapped(_ sender: UIButton) {
+          updatePattern(button: sender.tag)
+      }
+    
+    func didSelectImage(image: UIImage?) {
+        guard let myImage = image else { return }
+        print("image->\(layoutDelegate!)")
+        layoutDelegate?.displayImage(myImage, at: didButtonTapped)
+       }
+       
+       func didButtonTapped1(sender: UIButton) {
+           didButtonTapped = 1
+           imagePicker.present(from: sender)
+       }
+       
+       func didButtonTapped2(sender: UIButton) {
+           didButtonTapped = 2
+           imagePicker.present(from: sender)
+       }
+
+       func didButtonTapped3(sender: UIButton) {
+           didButtonTapped = 3
+           imagePicker.present(from: sender)
+         }
+
+       func didButtonTapped4(sender: UIButton) {
+           didButtonTapped = 4
+           imagePicker.present(from: sender)
+         }
+    
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
       updateOrientation()
     }
@@ -179,42 +165,43 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
             var translationTransform:CGAffineTransform
             translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)     //move the view to the top
             
-            UIView.animate(withDuration: 3, animations: {
-                self.displayPattern.transform = translationTransform }, completion: { (true) in
-                    let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
-                    let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
-                    self.present(activityController, animated: true, completion:nil)            // bring up the controller
-
-                    activityController.completionWithItemsHandler = {(type,completed,items,error) in
-                    let translationTransform = CGAffineTransform(translationX: 0, y: 0)            // get back the view at the end
-                    UIView.animate(withDuration: 3, animations: {
-                        self.displayPattern.transform = translationTransform
-                    }, completion: nil)
-                    }
-            })
+            animatePattern(transform: translationTransform)
+ 
         }
         if (sender.direction == .left),
             (deviceOrientation == .landscape) {
             let screenWidth = UIScreen.main.bounds.width
             var translationTransform:CGAffineTransform
             translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0) //move the view to the left
-
-            UIView.animate(withDuration: 3, animations: {
-                self.displayPattern.transform = translationTransform }, completion: { (true) in
-                    let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
-                    let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
-                    self.present(activityController, animated: true, completion: nil)           //bring uop the controller
-
-                    activityController.completionWithItemsHandler = {(type,completed,items,error) in
-                        let translationTransform = CGAffineTransform(translationX: 0, y: 0)     // get back the view at the end
-                        UIView.animate(withDuration: 3, animations: {
-                            self.displayPattern.transform = translationTransform
-                        }, completion: nil)
-                    }
-            })
+            animatePattern(transform: translationTransform)
         }
       
     }
+    
+    private func displayActivityViewController() -> UIActivityViewController {
+        let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
+        let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
+        self.present(activityController, animated: true, completion: nil)     //bring uop the controller
+        return activityController
+    }
+    
+    private func animateBackToOrigin() {
+        let translationTransform = CGAffineTransform(translationX: 0, y: 0)     // get back the view at the end
+        UIView.animate(withDuration: 3, animations: {
+            self.displayPattern.transform = translationTransform
+        }, completion: nil)
+    }
+    
+    private func animatePattern(transform: CGAffineTransform) {
+    UIView.animate(withDuration: 3, animations: {
+        self.displayPattern.transform = transform }, completion: { (true) in
+            let activityController = self.displayActivityViewController()
+            activityController.completionWithItemsHandler = {(type,completed,items,error) in
+                self.animateBackToOrigin()
+                }
+            })
+    }
+    
     //***************************************************************
     //*** captureImageFromDislayPattern                           ***
     //*** capture an image of the view in parameter               ***
