@@ -35,8 +35,10 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     
     private var deviceOrientation:Orientation?
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+   /* override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.imagePicker = ImagePicker()
+        
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         imagePicker.presentationController = self
         imagePicker.delegate = self
@@ -46,12 +48,12 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         layout2.viewControllerParent = self
         layout3.delegate = self
         layout3.viewControllerParent = self
-    }
+    }*/
     
     required init?(coder: NSCoder) {
         self.imagePicker = ImagePicker()
-
         super.init(coder:coder)
+        
         imagePicker.presentationController = self
         imagePicker.delegate = self
         
@@ -62,7 +64,6 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         layout3.delegate = self
         layout3.viewControllerParent = self
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,17 +78,14 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         
         displayPattern.addGestureRecognizer(leftSwipe)
         displayPattern.addGestureRecognizer(upSwipe)
-
     }
 
-    
     @IBAction func buttonsTapped(_ sender: UIButton) {
           updatePattern(button: sender.tag)
       }
     
     func didSelectImage(image: UIImage?) {
         guard let myImage = image else { return }
-        print("image->\(layoutDelegate!)")
         layoutDelegate?.displayImage(myImage, at: didButtonTapped)
        }
        
