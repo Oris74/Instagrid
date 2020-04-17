@@ -82,35 +82,63 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
 
     @IBAction func buttonsTapped(_ sender: UIButton) {
           updatePattern(button: sender.tag)
+    }
+    
+    
+    private func  updatePattern(button: Int) {
+        updateButton(buttonTapped: button)
+        switch button {
+        case 0:
+            currentLayout = layout1
+        case 1:
+            currentLayout = layout2
+        case 2:
+            currentLayout = layout3
+        default: break
+        }
+        displayPattern.addSubview(currentLayout!)
+        addLayoutConstraint(parentView: displayPattern, childView: currentLayout!)
       }
+
+      private func updateButton (buttonTapped: Int ) {
+          for button in 0...2 {
+              if button == buttonTapped {
+                  buttons[button].setImage(
+                      UIImage(named:"Selected.png"), for: .normal)
+              } else {
+                  buttons[button].setImage(nil, for: .normal)
+              }
+          }
+      }
+    
     
     func didSelectImage(image: UIImage?) {
         guard let myImage = image else { return }
         layoutDelegate?.displayImage(myImage, at: didButtonTapped)
-       }
+    }
        
-       func didButtonTapped1(sender: UIButton) {
-           didButtonTapped = 1
-           imagePicker.present(from: sender)
-       }
+    func didButtonTapped1(sender: UIButton) {
+        didButtonTapped = 1
+        imagePicker.present(from: sender)
+    }
        
-       func didButtonTapped2(sender: UIButton) {
-           didButtonTapped = 2
-           imagePicker.present(from: sender)
-       }
+    func didButtonTapped2(sender: UIButton) {
+        didButtonTapped = 2
+        imagePicker.present(from: sender)
+    }
 
-       func didButtonTapped3(sender: UIButton) {
-           didButtonTapped = 3
-           imagePicker.present(from: sender)
-         }
+    func didButtonTapped3(sender: UIButton) {
+        didButtonTapped = 3
+        imagePicker.present(from: sender)
+    }
 
-       func didButtonTapped4(sender: UIButton) {
-           didButtonTapped = 4
-           imagePicker.present(from: sender)
-         }
+    func didButtonTapped4(sender: UIButton) {
+        didButtonTapped = 4
+        imagePicker.present(from: sender)
+    }
     
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-      updateOrientation()
+        updateOrientation()
     }
 
     private func updateOrientation() {
@@ -124,32 +152,7 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         }
     }
     
-    private func  updatePattern(button: Int) {
-        updateButton(buttonTapped: button)
-        switch button {
-        case 0:
-            currentLayout = layout1
-        case 1:
-            currentLayout = layout2
-        case 2:
-            currentLayout = layout3
-        default: break
-        }
-        
-        displayPattern.addSubview(currentLayout!)
-        addLayoutConstraint(parentView: displayPattern, childView: currentLayout!)
-    }
-
-    private func updateButton (buttonTapped: Int ) {
-        for button in 0...2 {
-            if button == buttonTapped {
-                buttons[button].setImage(
-                    UIImage(named:"Selected.png"), for: .normal)
-            } else {
-                buttons[button].setImage(nil, for: .normal)
-            }
-        }
-    }
+  
     
     //*************************************************************
     //*** handleSwipes                                          ***
