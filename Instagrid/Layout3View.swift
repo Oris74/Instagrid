@@ -8,55 +8,51 @@
 
 import UIKit
 
-class Layout3View: UIView, LayoutDelegate {
-    var delegate:ViewDelegate?
-    
+class Layout3View: UIView, ManageLayout {
+
+    weak var delegate: ViewDelegate?
+
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var button4: UIButton!
-    
+
     @IBOutlet var image1: UIImageView!
     @IBOutlet var image2: UIImageView!
     @IBOutlet var image3: UIImageView!
     @IBOutlet var image4: UIImageView!
-    
+
     @IBAction func button1Tapped(_ sender: UIButton) {
         delegate!.didButtonTapped1(sender: sender)
-        self.viewControllerParent?.layoutDelegate = self
     }
-    
+
     @IBAction func button2Tapped(_ sender: UIButton) {
         delegate!.didButtonTapped2(sender: sender)
-        self.viewControllerParent?.layoutDelegate = self
     }
-    
+
     @IBAction func button3Tapped(_ sender: UIButton) {
         delegate!.didButtonTapped3(sender: sender)
-        self.viewControllerParent?.layoutDelegate = self
     }
+
     @IBAction func button4Tapped(_ sender: UIButton) {
         delegate!.didButtonTapped4(sender: sender)
-        self.viewControllerParent?.layoutDelegate = self
-       }
-    
-    var viewControllerParent:ViewController?
-    
-    func displayImage(_ image:UIImage, at buttons: Int) {
-          switch buttons {
-          case 1:
-              self.image1.contentMode = .scaleAspectFill
-              self.image1.image = image
-          case 2:
-              self.image2.contentMode = .scaleAspectFill
-              self.image2.image = image
-          case 3:
-              self.image3.contentMode = .scaleAspectFill
-              self.image3.image = image
-          case 4:
+    }
+
+    func displayImage(_ image: UIImage, at buttons: Int) {
+            switch buttons {
+            case 1:
+                self.image1.contentMode = .scaleAspectFill
+                self.image1.image = image
+            case 2:
+                self.image2.contentMode = .scaleAspectFill
+                self.image2.image = image
+            case 3:
+                self.image3.contentMode = .scaleAspectFill
+                self.image3.image = image
+            case 4:
               self.image4.contentMode = .scaleAspectFill
               self.image4.image = image
-          default: break
-          }
-      }
+            default: break
+            }
+        }
 }

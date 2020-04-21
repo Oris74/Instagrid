@@ -23,84 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "35F2A335-7A75-4ED5-9713-61AE8E5DBEBE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/Layout3View.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "displayImage(_:at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "35F2A335-7A75-4ED5-9713-61AE8E5DBEBE - 7a979fdcf550f52a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout3View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout3View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "118">
-               </Location>
-               <Location
-                  uuid = "35F2A335-7A75-4ED5-9713-61AE8E5DBEBE - 7a979fdcf550f52a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout3View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout3View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "550">
-               </Location>
-               <Location
-                  uuid = "35F2A335-7A75-4ED5-9713-61AE8E5DBEBE - 7a979fdcf550f52a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout3View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout3View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1027">
-               </Location>
-               <Location
-                  uuid = "35F2A335-7A75-4ED5-9713-61AE8E5DBEBE - 7a979fdcf550f52a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout3View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout3View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1504">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0CBB8314-187C-4DCF-BD8B-930EEE10BE44"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -108,8 +30,8 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "didSelectImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -124,8 +46,8 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "init(coder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -140,8 +62,8 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -156,73 +78,10 @@
             filePath = "Instagrid/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9CFE66A0-851C-438C-9B1C-136461EAC379"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/Layout1View.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "displayImage(_:at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9CFE66A0-851C-438C-9B1C-136461EAC379 - 8b3f18c84060aad0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout1View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout1View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "118">
-               </Location>
-               <Location
-                  uuid = "9CFE66A0-851C-438C-9B1C-136461EAC379 - 8b3f18c84060aad0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout1View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout1View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "550">
-               </Location>
-               <Location
-                  uuid = "9CFE66A0-851C-438C-9B1C-136461EAC379 - 8b3f18c84060aad0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagrid.Layout1View.displayImage(_: __C.UIImage, at: Swift.Int) -&gt; ()"
-                  moduleName = "Instagrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/laurentdebeaujon/Documents/Fichiers/MonDepot/Instagrid/Instagrid/Layout1View.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1027">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -235,58 +94,10 @@
             filePath = "Instagrid/Layout2View.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "Layout2View"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4CB6FAEF-5B6E-4295-BF1C-292634C065EC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/ImagePicker.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CEBDB185-CD09-4821-9EE0-A5904AFE677B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/ImagePicker.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "imagePickerControllerDidCancel(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "555D5068-D888-44D1-B6F4-79DB5BA090DC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagrid/ImagePicker.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

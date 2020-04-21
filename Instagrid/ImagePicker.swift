@@ -14,7 +14,6 @@ public protocol ImagePickerDelegate: class {
 
 class ImagePicker: NSObject {
     private let pickerController: UIImagePickerController
-    weak var presentationController: UIViewController?
     weak var delegate: ImagePickerDelegate?
 
     public override init() {
@@ -27,13 +26,13 @@ class ImagePicker: NSObject {
         self.pickerController.mediaTypes = ["public.image"]
     }
 
-  public func present(from sourceView: UIView) {
+  public func present(from sourceView: UIView, presentationController: UIViewController) {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             return
         }
-       
+
     self.pickerController.sourceType = .photoLibrary
-        self.presentationController?.present(self.pickerController, animated: true)
+        presentationController.present(self.pickerController, animated: true)
     }
 
     private func pickerController(_ controller: UIImagePickerController, didSelectImage image: UIImage?) {
@@ -43,14 +42,13 @@ class ImagePicker: NSObject {
 }
 
 extension ImagePicker: UIImagePickerControllerDelegate {
-    
+
         public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             self.pickerController(picker, didSelectImage: nil)
         }
 
         public func imagePickerController(_ picker: UIImagePickerController,
-                                          didFinishPickingMediaWithInfo info:
-                                        [UIImagePickerController.InfoKey: Any]) {
+                                          didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             guard let image = info[.originalImage] as? UIImage else {
                 return self.pickerController(picker, didSelectImage: nil)
             }
