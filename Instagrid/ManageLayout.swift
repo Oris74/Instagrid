@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ManageLayout: UIView {
-    func displayImage(_ image: UIImage, at buttons: Int)
+    func displayImage(_ image: UIImage, at button: Int)
 }

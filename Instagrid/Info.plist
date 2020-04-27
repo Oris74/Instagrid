@@ -72,5 +72,7 @@
 	<string>This app wants to use your photos</string>
 	<key>NSCameraUsageDescription</key>
 	<string>this apps wants to take pictures</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs permission to write photos...</string>
 </dict>
 </plist>

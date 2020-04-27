@@ -27,7 +27,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button1Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xy8-sF-eyM"/>
+                                        <action selector="imageButton1Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="L7W-sM-PDd"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-JB-0cr" userLabel="UpLeftImage">
@@ -55,7 +55,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="SNi-0v-14h"/>
+                                        <action selector="imageButton2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="idy-5n-A12"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-uW-jcn" userLabel="UpRightImage">
@@ -93,7 +93,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button3Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="ni4-kF-TNP"/>
+                                        <action selector="imageButton3Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vfc-b1-fbE"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-eH-uB3" userLabel="DownLeftImage">
@@ -121,7 +121,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button4Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hIg-aL-W2A"/>
+                                        <action selector="imageButton4Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="BcY-TD-kkT"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fA-TB-sMl" userLabel="DownRightImage">
@@ -163,14 +163,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="button1" destination="J9c-jp-ibb" id="9NL-8e-YAy"/>
-                <outlet property="button2" destination="dZo-gV-M3b" id="PKj-i6-4kl"/>
-                <outlet property="button3" destination="NsO-Zm-H3A" id="Qcj-DK-K7s"/>
-                <outlet property="button4" destination="MH9-cF-96C" id="TU6-50-hjl"/>
-                <outlet property="image1" destination="pDL-JB-0cr" id="OdR-hy-35A"/>
-                <outlet property="image2" destination="x2w-uW-jcn" id="aTC-RV-gmm"/>
-                <outlet property="image3" destination="hs7-eH-uB3" id="ORE-Xy-x6y"/>
-                <outlet property="image4" destination="9fA-TB-sMl" id="yQE-dV-KRB"/>
+                <outlet property="imageButton1" destination="J9c-jp-ibb" id="cjV-M2-gjT"/>
+                <outlet property="imageButton2" destination="dZo-gV-M3b" id="zir-fy-2Rv"/>
+                <outlet property="imageButton3" destination="NsO-Zm-H3A" id="gZW-kP-oqd"/>
+                <outlet property="imageButton4" destination="MH9-cF-96C" id="RHw-cb-SSp"/>
+                <outletCollection property="images" destination="pDL-JB-0cr" collectionClass="NSMutableArray" id="s5V-Ri-ViO"/>
+                <outletCollection property="images" destination="x2w-uW-jcn" collectionClass="NSMutableArray" id="g7d-OM-WRh"/>
+                <outletCollection property="images" destination="hs7-eH-uB3" collectionClass="NSMutableArray" id="tAV-98-A77"/>
+                <outletCollection property="images" destination="9fA-TB-sMl" collectionClass="NSMutableArray" id="wRj-UT-EFs"/>
             </connections>
             <point key="canvasLocation" x="-426" y="-1325"/>
         </view>

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ViewDelegate: AnyObject {
-    func didButtonTapped1(sender: UIButton)
-    func didButtonTapped2(sender: UIButton)
-    func didButtonTapped3(sender: UIButton)
-    func didButtonTapped4(sender: UIButton)
+    func didImageButtonTapped1(sender: UIButton)
+    func didImageButtonTapped2(sender: UIButton)
+    func didImageButtonTapped3(sender: UIButton)
+    func didImageButtonTapped4(sender: UIButton)
 }

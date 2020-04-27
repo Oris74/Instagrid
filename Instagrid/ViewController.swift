@@ -10,42 +10,44 @@ import UIKit
 
 class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
 
-    @IBOutlet weak var displayPattern: UIView!
+    @IBOutlet weak var displayPattern: UIView!      //central View that will include the selected pattern
 
-    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet private var patternButton: [UIButton]!        //3 pattern buttons collection
 
-    var didButtonTapped: Int = 0
+    private var didImageButtonTapped: Int = 0       //current ImageBoutton tapped to display image
 
-    private var layout1 =
-        Bundle.main.loadNibNamed(
-            "Layout1View", owner: nil, options: nil)?.first as! Layout1View //swiftlint:disable:this force_cast
-    private var layout2 =
-        Bundle.main.loadNibNamed(
-            "Layout2View", owner: nil, options: nil)?.first as! Layout2View //swiftlint:disable:this force_cast
-    private var layout3 =
-        Bundle.main.loadNibNamed(
-            "Layout3View", owner: nil, options: nil)?.first as! Layout3View //swiftlint:disable:this force_cast
+    private var layout1: Layout1View?
+    private var layout2: Layout2View?
+    private var layout3: Layout3View?
 
-    var currentLayout: ManageLayout
+    private var currentLayout: ManageLayout
 
     private enum Orientation: String {
         case portrait, landscape
     }
 
-    let imagePicker: ImagePicker
+    private let imagePicker: ImagePicker
 
     private var deviceOrientation: Orientation?
 
     required init?(coder: NSCoder) {
         self.imagePicker = ImagePicker()
-        self.currentLayout = layout2
+
+        self.layout1 = Bundle.main.loadNibNamed(
+            "Layout1View", owner: nil, options: nil)?.first as? Layout1View
+        self.layout2 = Bundle.main.loadNibNamed(
+            "Layout2View", owner: nil, options: nil)?.first as? Layout2View
+        self.layout3 = Bundle.main.loadNibNamed(
+            "Layout3View", owner: nil, options: nil)?.first as? Layout3View
+        self.currentLayout = layout2!
+
         super.init(coder: coder)
 
         imagePicker.delegate = self
 
-        layout1.delegate = self
-        layout2.delegate = self
-        layout3.delegate = self
+        layout1!.delegate = self
+        layout2!.delegate = self
+        layout3!.delegate = self
     }
 
     override func viewDidLoad() {
@@ -63,65 +65,78 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         displayPattern.addGestureRecognizer(upSwipe)
     }
 
-    @IBAction func buttonsTapped(_ sender: UIButton) {
+    @IBAction private func patternButtonTapped(_ sender: UIButton) {
           updatePattern(button: sender.tag)
     }
 
-    private func  updatePattern(button: Int) {
-        updateButton(buttonTapped: button)
+    private func updatePattern(button: Int) {
+        updatePatternButtons(buttonTapped: button)
         switch button {
         case 0:
-            currentLayout = layout1
+            currentLayout = layout1!
         case 1:
-            currentLayout = layout2
+            currentLayout = layout2!
         case 2:
-            currentLayout = layout3
+            currentLayout = layout3!
         default: break
         }
         displayPattern.addSubview(currentLayout)
         addLayoutConstraint(parentView: displayPattern, childView: currentLayout)
       }
 
-      private func updateButton (buttonTapped: Int ) {
-          for button in 0...2 {
-              if button == buttonTapped {
-                  buttons[button].setImage(
-                      UIImage(named: "Selected.png"), for: .normal)
-              } else {
-                  buttons[button].setImage(nil, for: .normal)
-              }
-          }
-      }
+    private func updatePatternButtons(buttonTapped: Int ) {
+        for button in 0...2 {
+        if button == buttonTapped {
+                patternButton[button].setImage(
+                    UIImage(named: "Selected.png"), for: .normal)
+            } else {
+                patternButton[button].setImage(nil, for: .normal)
+            }
+        }
+    }
 
+    //*************************************************************
+    //*** didSelectImage                                        ***
+    //*** methode belong to protocol magePickerDelegate         ***
+    //*** get image from imagePickerController                  ***
+    //*************************************************************
     internal func didSelectImage(image: UIImage?) {
         guard let myImage = image else { return }
-        currentLayout.displayImage(myImage, at: didButtonTapped)
+        currentLayout.displayImage(myImage, at: didImageButtonTapped)       //display image to the right location
     }
 
-    internal func didButtonTapped1(sender: UIButton) {
-        didButtonTapped = 1
-        imagePicker.present(from: sender, presentationController: self)
+    internal func didImageButtonTapped1(sender: UIButton) {
+        didImageButtonTapped = 0                                            //memorize the  location of the futur image
+        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
     }
 
-    internal func didButtonTapped2(sender: UIButton) {
-        didButtonTapped = 2
-        imagePicker.present(from: sender, presentationController: self)
+    internal func didImageButtonTapped2(sender: UIButton) {
+        didImageButtonTapped = 1
+        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
     }
 
-    internal func didButtonTapped3(sender: UIButton) {
-        didButtonTapped = 3
-        imagePicker.present(from: sender, presentationController: self)
+    internal func didImageButtonTapped3(sender: UIButton) {
+        didImageButtonTapped = 2
+        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
     }
 
-    internal func didButtonTapped4(sender: UIButton) {
-        didButtonTapped = 4
-        imagePicker.present(from: sender, presentationController: self)
+    internal func didImageButtonTapped4(sender: UIButton) {
+        didImageButtonTapped = 3
+        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
     }
 
+    //******************************************************************
+    //*** didRotate                                                  ***
+    //*** override of the methode to detect a new device orientation ***
+    //******************************************************************
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         updateOrientation()
     }
 
+    //*************************************************************************
+    //*** updateOrientation                                                 ***
+    //*** define the current mode according to the height and width         ***
+    //*************************************************************************
     private func updateOrientation() {
         let height =  UIScreen.main.bounds.height
         let width = UIScreen.main.bounds.width
@@ -156,10 +171,14 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         }
     }
 
+    //********************************************************************************
+    //*** displayActivityViewController                                            ***
+    //*** capture image pattern and bring up the ActivityViewController            ***
+    //********************************************************************************
     private func displayActivityViewController() -> UIActivityViewController {
         let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
         let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
-        self.present(activityController, animated: true, completion: nil)     //bring uop the controller
+        self.present(activityController, animated: true, completion: nil)     //bring up the controller
         return activityController
     }
 
@@ -185,7 +204,7 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     //*** capture an image of the view in parameter               ***
     //*** view:  name of the view.  return : UIImage              ***
     //***************************************************************
-    func captureImageFromDisplayPattern(_ view: UIView?) -> UIImage {
+    private func captureImageFromDisplayPattern(_ view: UIView?) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: view!.bounds.size)
         let capturedImage = renderer.image {_ in
             view!.drawHierarchy(in: view!.bounds, afterScreenUpdates: true)

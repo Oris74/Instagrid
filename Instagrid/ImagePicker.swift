@@ -8,10 +8,6 @@
 
 import UIKit
 
-public protocol ImagePickerDelegate: class {
-    func didSelectImage(image: UIImage?)
-}
-
 class ImagePicker: NSObject {
     private let pickerController: UIImagePickerController
     weak var delegate: ImagePickerDelegate?
@@ -26,12 +22,11 @@ class ImagePicker: NSObject {
         self.pickerController.mediaTypes = ["public.image"]
     }
 
-  public func present(from sourceView: UIView, presentationController: UIViewController) {
+    public func present(from sourceView: UIView, presentationController: UIViewController) {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             return
         }
-
-    self.pickerController.sourceType = .photoLibrary
+        pickerController.sourceType = .photoLibrary
         presentationController.present(self.pickerController, animated: true)
     }
 
@@ -43,18 +38,22 @@ class ImagePicker: NSObject {
 
 extension ImagePicker: UIImagePickerControllerDelegate {
 
-        public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            self.pickerController(picker, didSelectImage: nil)
-        }
+    internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.pickerController(picker, didSelectImage: nil)
+    }
 
-        public func imagePickerController(_ picker: UIImagePickerController,
-                                          didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            guard let image = info[.originalImage] as? UIImage else {
-                return self.pickerController(picker, didSelectImage: nil)
-            }
-            self.pickerController(picker, didSelectImage: image)
+    internal func imagePickerController(_ picker: UIImagePickerController,
+                                        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
+            return self.pickerController(picker, didSelectImage: nil)
         }
+        self.pickerController(picker, didSelectImage: image)
+    }
 }
 
 extension ImagePicker: UINavigationControllerDelegate {
-  }
+}
+
+public protocol ImagePickerDelegate: class {
+    func didSelectImage(image: UIImage?)
+}

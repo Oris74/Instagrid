@@ -24,7 +24,7 @@
                             </constraints>
                             <state key="normal" image="Plus"/>
                             <connections>
-                                <action selector="button1Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="SpZ-gM-glu"/>
+                                <action selector="imageButton1Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="hi2-uy-uab"/>
                             </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-I9-Jya" userLabel="UpRectImage">
@@ -56,7 +56,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="oRh-t2-d4P"/>
+                                        <action selector="imageButton2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vNL-sN-9zl"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0p-6c-gwI" userLabel="DownLeftImage">
@@ -84,7 +84,7 @@
                                     </constraints>
                                     <state key="normal" image="Plus"/>
                                     <connections>
-                                        <action selector="button3Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="qtu-m6-cQo"/>
+                                        <action selector="imageButton3Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ji0-5A-vYi"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAb-a8-VHr" userLabel="DownRightImage">
@@ -122,12 +122,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="button1" destination="I1j-qW-FDM" id="6zU-pC-pg0"/>
-                <outlet property="button2" destination="YQK-MM-GVh" id="g0K-92-9L8"/>
-                <outlet property="button3" destination="JZn-OH-zoT" id="fDB-aI-z9h"/>
-                <outlet property="image1" destination="IUd-I9-Jya" id="KPK-DV-Mq8"/>
-                <outlet property="image2" destination="p0p-6c-gwI" id="pQ2-rz-45G"/>
-                <outlet property="image3" destination="QAb-a8-VHr" id="7UT-bC-hWG"/>
+                <outlet property="imageButton1" destination="I1j-qW-FDM" id="49r-Hl-A5d"/>
+                <outlet property="imageButton2" destination="YQK-MM-GVh" id="E8K-LF-ubf"/>
+                <outlet property="imageButton3" destination="JZn-OH-zoT" id="rdC-lG-ePa"/>
+                <outletCollection property="images" destination="IUd-I9-Jya" collectionClass="NSMutableArray" id="VSz-Kd-Yz6"/>
+                <outletCollection property="images" destination="p0p-6c-gwI" collectionClass="NSMutableArray" id="zME-d2-q2S"/>
+                <outletCollection property="images" destination="QAb-a8-VHr" collectionClass="NSMutableArray" id="7GZ-Pd-RnV"/>
             </connections>
             <point key="canvasLocation" x="99.850074962518747" y="-9.5999999999999996"/>
         </view>
