@@ -45,9 +45,9 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
 
         imagePicker.delegate = self
 
-        layout1!.delegate = self
-        layout2!.delegate = self
-        layout3!.delegate = self
+        layout1?.delegate = self
+        layout2?.delegate = self
+        layout3?.delegate = self
     }
 
     override func viewDidLoad() {
@@ -70,16 +70,20 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     }
 
     private func updatePattern(button: Int) {
-        updatePatternButtons(buttonTapped: button)
+
         switch button {
         case 0:
-            currentLayout = layout1!
+            guard let layout = layout1 else { return }
+            currentLayout = layout
         case 1:
-            currentLayout = layout2!
+            guard let layout = layout2 else { return }
+            currentLayout = layout
         case 2:
-            currentLayout = layout3!
+            guard let layout = layout3 else { return }
+            currentLayout = layout
         default: break
         }
+        updatePatternButtons(buttonTapped: button)
         displayPattern.addSubview(currentLayout)
         addLayoutConstraint(parentView: displayPattern, childView: currentLayout)
       }
@@ -178,6 +182,7 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     private func displayActivityViewController() -> UIActivityViewController {
         let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
         let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
+
         activityController.modalTransitionStyle = .flipHorizontal
         activityController.excludedActivityTypes = .some([
             .addToReadingList,

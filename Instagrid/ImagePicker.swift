@@ -52,7 +52,7 @@ extension ImagePicker: UIImagePickerControllerDelegate {
     }
 }
 
-extension ImagePicker: UINavigationControllerDelegate {
+extension ImagePicker: UINavigationControllerDelegate {         //mandatory but not used in this project
 }
 
 public protocol ImagePickerDelegate: class {
