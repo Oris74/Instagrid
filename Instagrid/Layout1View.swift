@@ -18,7 +18,8 @@ class Layout1View: UIView, ManageLayout {
 
     @IBOutlet private var images: [UIImageView]! {
         didSet {
-            self.images!.forEach { $0.contentMode = .scaleAspectFill }
+            self.images!.forEach { $0.contentMode = .scaleAspectFill }      // initialize ImageView to completely
+                                                                            // fill the view without image distortion
         }
     }
 

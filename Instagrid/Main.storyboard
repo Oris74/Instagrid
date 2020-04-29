@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-0D-NKm">
-                                <rect key="frame" x="274.5" y="14" width="118.5" height="39"/>
+                                <rect key="frame" x="128.5" y="14" width="118.5" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -84,17 +84,17 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-Ub-ivK" userLabel="DisplayPattern" customClass="Layout1View" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="187.5" y="63" width="292" height="292"/>
+                                <rect key="frame" x="25" y="171" width="325" height="325"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ppz-Ub-ivK" secondAttribute="height" multiplier="1:1" id="sx5-87-J7c"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b2z-4l-YKQ" userLabel="StackButtons">
-                                <rect key="frame" x="544.5" y="78" width="77.5" height="262"/>
+                                <rect key="frame" x="40" y="558.5" width="295" height="88.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFh-hy-VXU" userLabel="Button1">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="88.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qFh-hy-VXU" secondAttribute="height" multiplier="1:1" id="QzH-5D-aoC"/>
                                         </constraints>
@@ -106,14 +106,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-da-RCK" userLabel="Button2">
-                                        <rect key="frame" x="0.0" y="92.5" width="77.5" height="77"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="88" height="88.5"/>
                                         <state key="normal" image="Selected" backgroundImage="Layout 2"/>
                                         <connections>
                                             <action selector="patternButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bz5-v1-LMF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-gT-L6X" userLabel="Button3">
-                                        <rect key="frame" x="0.0" y="184.5" width="77.5" height="77.5"/>
+                                        <rect key="frame" x="206.5" y="0.0" width="88.5" height="88.5"/>
                                         <state key="normal" backgroundImage="Layout 3">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
@@ -165,6 +165,9 @@
                                 <exclude reference="Qqb-Tg-2hy"/>
                                 <exclude reference="fjd-zf-eoK"/>
                                 <exclude reference="rTF-FG-vuE"/>
+                                <exclude reference="Kor-uM-POr"/>
+                                <exclude reference="joP-Yu-v1A"/>
+                                <exclude reference="kBa-ll-bQA"/>
                                 <exclude reference="ZX8-Jz-0Vq"/>
                                 <exclude reference="cwd-kh-J1J"/>
                                 <exclude reference="gwd-4j-5Og"/>
@@ -175,9 +178,6 @@
                                 <exclude reference="kVG-6q-CBy"/>
                                 <exclude reference="qJQ-v2-JGZ"/>
                                 <exclude reference="5aX-MZ-yFH"/>
-                                <exclude reference="Kor-uM-POr"/>
-                                <exclude reference="joP-Yu-v1A"/>
-                                <exclude reference="kBa-ll-bQA"/>
                                 <exclude reference="3lb-da-hCv"/>
                                 <exclude reference="FdC-L0-lGT"/>
                                 <exclude reference="VFB-WR-Hm9"/>
@@ -192,15 +192,15 @@
                                 <include reference="Ppz-Ub-ivK"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Kor-uM-POr"/>
+                                <include reference="joP-Yu-v1A"/>
+                                <include reference="kBa-ll-bQA"/>
                                 <include reference="ZX8-Jz-0Vq"/>
                                 <include reference="cwd-kh-J1J"/>
                                 <include reference="DAj-V0-fYS"/>
                                 <include reference="FSG-cO-TRB"/>
                                 <include reference="qJQ-v2-JGZ"/>
                                 <include reference="5aX-MZ-yFH"/>
-                                <include reference="Kor-uM-POr"/>
-                                <include reference="joP-Yu-v1A"/>
-                                <include reference="kBa-ll-bQA"/>
                                 <include reference="FdC-L0-lGT"/>
                                 <include reference="VFB-WR-Hm9"/>
                                 <include reference="uPz-eG-MvW"/>

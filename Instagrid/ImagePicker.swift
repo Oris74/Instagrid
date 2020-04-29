@@ -27,6 +27,7 @@ class ImagePicker: NSObject {
             return
         }
         pickerController.sourceType = .photoLibrary
+        pickerController.modalPresentationStyle = .fullScreen
         presentationController.present(self.pickerController, animated: true)
     }
 

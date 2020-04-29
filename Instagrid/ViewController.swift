@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
 
-    @IBOutlet weak var displayPattern: UIView!      //central View that will include the selected pattern
+    @IBOutlet weak var displayPattern: UIView!          //central View that will include the selected pattern
 
-    @IBOutlet private var patternButton: [UIButton]!        //3 pattern buttons collection
+    @IBOutlet private var patternButton: [UIButton]!    //3 pattern buttons collection
 
-    private var didImageButtonTapped: Int = 0       //current ImageBoutton tapped to display image
+    private var didImageButtonTapped: Int = 0           //current ImageBoutton tapped to display image
 
     private var layout1: Layout1View?
     private var layout2: Layout2View?
@@ -178,6 +178,14 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     private func displayActivityViewController() -> UIActivityViewController {
         let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
         let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
+        activityController.modalTransitionStyle = .flipHorizontal
+        activityController.excludedActivityTypes = .some([
+            .addToReadingList,
+            .markupAsPDF,
+            .print,
+            .postToWeibo,
+            .postToTencentWeibo]
+        )
         self.present(activityController, animated: true, completion: nil)     //bring up the controller
         return activityController
     }
@@ -190,7 +198,7 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     }
 
     private func animatePattern(transform: CGAffineTransform) {
-    UIView.animate(withDuration: 3, animations: {
+        UIView.animate(withDuration: 3, animations: {
         self.displayPattern.transform = transform }, completion: { _ in
             let activityController = self.displayActivityViewController()
             activityController.completionWithItemsHandler = {(type, completed, items, error) in
