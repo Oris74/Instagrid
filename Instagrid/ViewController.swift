@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
-
-    @IBOutlet weak var displayPattern: UIView!          //central View that will include the selected pattern
-
-    @IBOutlet private var patternButton: [UIButton]!    //3 pattern buttons collection
-
-    private var didImageButtonTapped: Int = 0           //current ImageBoutton tapped to display image
+    ///central View that will include the selected pattern
+    @IBOutlet weak var displayPattern: UIView!
+    ///3 patterns buttons collection
+    @IBOutlet private var patternButton: [UIButton]!
+    ///current ImageBoutton tapped to display image
+    private var didImageButtonTapped: Int = 0
 
     private var layout1: Layout1View?
     private var layout2: Layout2View?
@@ -31,16 +31,16 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
     private var deviceOrientation: Orientation?
 
     required init?(coder: NSCoder) {
-        self.imagePicker = ImagePicker()
-
         self.layout1 = Bundle.main.loadNibNamed(
             "Layout1View", owner: nil, options: nil)?.first as? Layout1View
         self.layout2 = Bundle.main.loadNibNamed(
             "Layout2View", owner: nil, options: nil)?.first as? Layout2View
         self.layout3 = Bundle.main.loadNibNamed(
             "Layout3View", owner: nil, options: nil)?.first as? Layout3View
+
         self.currentLayout = layout2!
 
+        self.imagePicker = ImagePicker()
         super.init(coder: coder)
 
         imagePicker.delegate = self
@@ -48,6 +48,7 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         layout1?.delegate = self
         layout2?.delegate = self
         layout3?.delegate = self
+
     }
 
     override func viewDidLoad() {
@@ -99,48 +100,46 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         }
     }
 
-    //*************************************************************
-    //*** didSelectImage                                        ***
-    //*** methode belong to protocol magePickerDelegate         ***
-    //*** get image from imagePickerController                  ***
-    //*************************************************************
+    ///methode belong to protocol magePickerDelegate
+    ///get image from imagePickerController
     internal func didSelectImage(image: UIImage?) {
+        ///display image to the right location
         guard let myImage = image else { return }
-        currentLayout.displayImage(myImage, at: didImageButtonTapped)       //display image to the right location
+        currentLayout.displayImage(myImage, at: didImageButtonTapped)
     }
 
     internal func didImageButtonTapped1(sender: UIButton) {
-        didImageButtonTapped = 0                                            //memorize the  location of the futur image
-        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
+        //memorize the  location of the futur image
+        didImageButtonTapped = 0
+        //Display PickerController
+        imagePicker.present(from: sender, presentationController: self)
     }
 
     internal func didImageButtonTapped2(sender: UIButton) {
         didImageButtonTapped = 1
-        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
+        //Display PickerController
+        imagePicker.present(from: sender, presentationController: self)
     }
 
     internal func didImageButtonTapped3(sender: UIButton) {
         didImageButtonTapped = 2
-        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
+        //Display PickerController
+        imagePicker.present(from: sender, presentationController: self)
     }
 
     internal func didImageButtonTapped4(sender: UIButton) {
         didImageButtonTapped = 3
-        imagePicker.present(from: sender, presentationController: self)     //Display PickerController
+        //Display PickerController
+        imagePicker.present(from: sender, presentationController: self)
     }
 
-    //******************************************************************
-    //*** didRotate                                                  ***
-    //*** override of the methode to detect a new device orientation ***
-    //******************************************************************
+    // override of the methode to detect a new device orientation
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         updateOrientation()
     }
 
-    //*************************************************************************
-    //*** updateOrientation                                                 ***
-    //*** define the current mode according to the height and width         ***
-    //*************************************************************************
+    /// updateOrientation
+    /// define the current mode according to the height and width
     private func updateOrientation() {
         let height =  UIScreen.main.bounds.height
         let width = UIScreen.main.bounds.width
@@ -152,17 +151,15 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
         }
     }
 
-    //*************************************************************
-    //*** handleSwipes                                          ***
-    //*** manage swipe gesture (up && left)                     ***
-    //*************************************************************
+    ///manage swipe gesture (up && left)
     @objc func handleSwipes(_ sender: UISwipeGestureRecognizer) {
-
         if (sender.direction == .up),
             ( deviceOrientation == .portrait ) {
             let screenHeight = UIScreen.main.bounds.height
             var translationTransform: CGAffineTransform
-            translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)     //move the view to the top
+
+            //move the view to the top
+            translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
             animatePattern(transform: translationTransform)
         }
 
@@ -170,15 +167,14 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
             (deviceOrientation == .landscape) {
             let screenWidth = UIScreen.main.bounds.width
             var translationTransform: CGAffineTransform
-            translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0) //move the view to the left
+
+            //move the view to the left
+            translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
             animatePattern(transform: translationTransform)
         }
     }
 
-    //********************************************************************************
-    //*** displayActivityViewController                                            ***
-    //*** capture image pattern and bring up the ActivityViewController            ***
-    //********************************************************************************
+    ///capture image pattern and bring up the ActivityViewController
     private func displayActivityViewController() -> UIActivityViewController {
         let myPattern = self.captureImageFromDisplayPattern(self.displayPattern)
         let activityController = UIActivityViewController(activityItems: [myPattern], applicationActivities: nil)
@@ -191,19 +187,21 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
             .postToWeibo,
             .postToTencentWeibo]
         )
-        self.present(activityController, animated: true, completion: nil)     //bring up the controller
+        //bring up the controller
+        self.present(activityController, animated: true, completion: nil)
         return activityController
     }
 
     private func animateBackToOrigin() {
-        let translationTransform = CGAffineTransform(translationX: 0, y: 0)     // get back the view at the end
-        UIView.animate(withDuration: 3, animations: {
+        // get back the view at the end
+        let translationTransform = CGAffineTransform(translationX: 0, y: 0)
+        UIView.animate(withDuration: 1, animations: {
             self.displayPattern.transform = translationTransform
         }, completion: nil)
     }
 
     private func animatePattern(transform: CGAffineTransform) {
-        UIView.animate(withDuration: 3, animations: {
+        UIView.animate(withDuration: 1, animations: {
         self.displayPattern.transform = transform }, completion: { _ in
             let activityController = self.displayActivityViewController()
             activityController.completionWithItemsHandler = {(type, completed, items, error) in
@@ -212,23 +210,18 @@ class ViewController: UIViewController, ViewDelegate, ImagePickerDelegate {
             })
     }
 
-    //***************************************************************
-    //*** captureImageFromDislayPattern                           ***
-    //*** capture an image of the view in parameter               ***
-    //*** view:  name of the view.  return : UIImage              ***
-    //***************************************************************
-    private func captureImageFromDisplayPattern(_ view: UIView?) -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size: view!.bounds.size)
+    /// capture an image of the view in parameter
+    /// view:  name of the view.
+    private func captureImageFromDisplayPattern(_ viewPattern: UIView) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: viewPattern.bounds.size)
         let capturedImage = renderer.image {_ in
-            view!.drawHierarchy(in: view!.bounds, afterScreenUpdates: true)
+            guard let myView = view else { return }
+            myView.drawHierarchy(in: viewPattern.bounds, afterScreenUpdates: true)
         }
         return capturedImage
     }
 
-    //************************************************************************
-    //*** addLayoutConstraint                                              ***
-    //*** define constraints for layouts inside container displayPattern   ***
-    //************************************************************************
+    ///define constraints for layouts inside container displayPattern
     private func addLayoutConstraint(parentView: UIView, childView: UIView) {
           childView.translatesAutoresizingMaskIntoConstraints = false
           let leftSideConstraint = NSLayoutConstraint(item: parentView,

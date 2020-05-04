@@ -18,20 +18,23 @@ class Layout2View: UIView, ManageLayout {
 
     @IBOutlet private var images: [UIImageView]! {
         didSet {
-            self.images!.forEach { $0.contentMode = .scaleAspectFill }
+            self.images.forEach { $0.contentMode = .scaleAspectFill }
         }
     }
 
     @IBAction private func imageButton1Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped1(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped1(sender: sender)
     }
 
     @IBAction private func imageButton2Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped2(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped2(sender: sender)
     }
 
     @IBAction private func imageBbutton3Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped3(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped3(sender: sender)
     }
 
     func displayImage(_ image: UIImage, at button: Int) {

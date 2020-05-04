@@ -22,6 +22,7 @@ class ImagePicker: NSObject {
         self.pickerController.mediaTypes = ["public.image"]
     }
 
+    ///present imagePickerController to the user
     public func present(from sourceView: UIView, presentationController: UIViewController) {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             return
@@ -52,7 +53,8 @@ extension ImagePicker: UIImagePickerControllerDelegate {
     }
 }
 
-extension ImagePicker: UINavigationControllerDelegate {         //mandatory but not used in this project
+//mandatory but not used in this project
+extension ImagePicker: UINavigationControllerDelegate {
 }
 
 public protocol ImagePickerDelegate: class {

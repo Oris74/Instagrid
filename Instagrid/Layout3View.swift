@@ -24,19 +24,23 @@ class Layout3View: UIView, ManageLayout {
     }
 
     @IBAction private func imageButton1Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped1(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped1(sender: sender)
     }
 
     @IBAction private func imageButton2Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped2(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped2(sender: sender)
     }
 
     @IBAction private func imageButton3Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped3(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped3(sender: sender)
     }
 
     @IBAction private func imageButton4Tapped(_ sender: UIButton) {
-        delegate!.didImageButtonTapped4(sender: sender)
+        guard let unpackedDelegate = delegate else { return }
+        unpackedDelegate.didImageButtonTapped4(sender: sender)
     }
 
     func displayImage(_ image: UIImage, at button: Int) {
