@@ -5,6 +5,7 @@ Instagrid combines photos by choosing from several layouts. The final result is 
     <img src="https://github.com/oris74/Instagrid/Images/InstagridScreenShot1.png" alt="ScreenShot1">
     <img src="https://github.com/oris74/Instagrid/Images/InstagridScreenShot2.png" alt="ScreenShot2">
 </div>
+![](https://github.com/oris74/Instagrid/Images/InstagridScreenShot1.png)
 ### Skills
 - camera management 
 - photo library
